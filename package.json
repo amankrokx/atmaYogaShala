@@ -6,7 +6,8 @@
   "scripts": {
     "dev-server": "webpack-dev-server",
     "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack --mode=production --config-name webpack.config.production.js",
+    "prod": "webpack --config ./webpack.config2.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend": "node app.js"
   },
