@@ -6,7 +6,6 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'public'),
   },
-  devtool: 'eval-source-map',
   module: {
     rules: [
       {
@@ -15,12 +14,5 @@ module.exports = {
       }
     ]
   },
-  mode: 'development',
-  devServer: {
-    devMiddleware: {
-      index: true,
-      publicPath: './public',
-      writeToDisk: true,
-    },
-  },
+  mode: 'production',
 };
