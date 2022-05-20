@@ -1,9 +1,14 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    about: './src/about.js', 
+    contacts: './src/contacts.js'
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'public'),
   },
   devtool: 'eval-source-map',
@@ -15,6 +20,14 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template:'./src/index.html', // relative to project root 
+      chunks: ['index'],
+      filename:'index.html'         // relative to build folder
+  })
+  ],
   mode: 'development',
   devServer: {
     devMiddleware: {
@@ -23,4 +36,5 @@ module.exports = {
       writeToDisk: true,
     },
   },
+
 };

@@ -22,18 +22,23 @@
   },
   "homepage": "https://github.com/amankrokx/atmaYogaShala#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
     "exports-loader": "^3.1.0",
     "firebase": "^9.8.1",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
     "nodemon": "^2.0.16",
     "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
+    "google-auth-library": "^8.0.2",
     "googleapis": "^100.0.0",
     "path": "^0.12.7"
   }
