@@ -1,0 +1,144 @@
+:root {
+    --ap: #456927;
+    --as: #318cfc;
+    --bg: #edf2f7;      /*final*/
+    --bgb: #dfe6ee;
+    --ptc: #313f4e;
+    --stc: #8ea2b8;
+    --acb: #BDCAC5;
+    --ac2: #F2E4DE;
+    --ac3: #E2EDF3;
+    --white: #ffffff;
+    /* --stc: #84807C; */
+    --ttc: #C6C3BD;
+    --shadow_old: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+  
+    --tbshadow: 0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15);
+    --trans: width 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  }
+
+@font-face {
+    font-family: 'Roboto-Slab-bold';
+    src: url('./assets/Roboto-Bold.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+nav.top-nav {
+    height: 56px;
+    background-color: var(--white);
+    padding: 10px 30px 10px 30px;
+    width: calc(100vw - 40px);
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    border-radius: 15px;
+    line-height: 36px;
+    font-family: 'Roboto-Slab-bold', 'serif';
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+nav.top-nav div.brand {
+    display: inline-block;
+    line-height: 36px;
+}
+nav.top-nav div.brand img {
+    height: 28px;
+    vertical-align: middle;
+}
+
+nav.top-nav div.brand span {
+    font-size: 1.2em;
+    margin-left: 15px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+nav.top-nav div.links {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: calc(5vw);
+    font-weight: bold;
+    color: var(--stc);
+}
+
+nav.top-nav div.links a {
+    margin-right: 10px;
+}
+
+.active {
+    color: var(--ap);
+}
+
+nav.top-nav div.login button {
+    -moz-transform: skew(-27deg, 0deg) translateX(-50px);
+    -webkit-transform: skew(-27deg, 0deg) translateX(-50px);
+    -o-transform: skew(-27deg, 0deg) translateX(-50px);
+    -ms-transform: skew(-27deg, 0deg) translateX(-50px);
+    transform: skew(-27deg, 0deg)
+                translateX(-50px);
+    float: right;
+    margin-left: 25px;
+    background: none;
+    border: none;
+    color: var(--ac3);
+    font-weight: bold;
+    vertical-align: middle;
+}
+nav.top-nav div.login button:first-of-type {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 15px 10px 15px;
+    top: -10px;
+    position: relative;
+    border-radius: 15px;
+}
+
+nav.top-nav div.login {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -11px;
+    height: 56px;
+    min-width: 230px;
+    width: 30%;
+    max-width: 280px;
+    line-height: 56px;
+    padding-top: 20px;
+    -moz-transform: skew(27deg, 0deg);
+    -webkit-transform: skew(27deg, 0deg);
+    -o-transform: skew(27deg, 0deg);
+    -ms-transform: skew(27deg, 0deg);
+    transform: skew(27deg, 0deg);
+    background: rgb(85,105,69);
+    background: linear-gradient(90deg, var(--as) 0%, var(--ap) 80%);
+}
+
