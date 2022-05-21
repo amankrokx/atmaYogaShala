@@ -1,5 +1,6 @@
 :root {
     --ap: #456927;
+    --apl: #cfe6bc;
     --as: #318cfc;
     --bg: #edf2f7;      /*final*/
     --bgb: #dfe6ee;
@@ -19,7 +20,13 @@
         22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
         41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
         100px 100px 80px rgba(0, 0, 0, 0.07);
-  
+    --shadow-close:
+        2.5px 2.5px 9px rgba(0, 0, 0, 0.043),
+        6.3px 6.4px 17.4px rgba(0, 0, 0, 0.056),
+        12.9px 13.1px 27px rgba(0, 0, 0, 0.064),
+        26.6px 27px 42.3px rgba(0, 0, 0, 0.076),
+        73px 74px 88px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(90deg, var(--as) 0%, var(--ap) 80%);
     --tbshadow: 0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15);
     --trans: width 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   }
@@ -37,11 +44,31 @@
     src: url('./assets/Roboto-Light.ttf');
 }
 
+::-webkit-scrollbar-corner { background: var(--scrollbg); }
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbg);
+    border-radius: 20px;
+    border: 3px solid #0084ff31;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     user-select: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ab) #0084ff31;
 }
 
 *:focus {
@@ -61,7 +88,7 @@ body {
     background-color: var(--bg);
     font-family: 'Roboto-Slab-regular';
     width: 100vw;
-    height: 1000px;
+    height: auto;
 }
 
 nav.top-nav {
@@ -92,7 +119,9 @@ div.bannermain {
     overflow: hidden;
     background-color: var(--ttc);
     background-position-y: center;
-    
+    box-shadow: var(--shadow-close);
+  
+
 }
 
 div.bannermain div div {
@@ -185,9 +214,6 @@ div.bannermain > div {
         -o-transform: skew(27deg, 0deg);
         -ms-transform: skew(27deg, 0deg);
         transform: skew(27deg, 0deg);
-    }
-
-    nav.top-nav div.login {
         max-width: 280px;
     }
 
@@ -232,7 +258,7 @@ nav.top-nav div.login button:first-of-type {
 
 nav.top-nav div.login {
     background: rgb(85,105,69);
-    background: linear-gradient(90deg, var(--as) 0%, var(--ap) 80%);
+    background: var(--gradient);
 }
 /* Mobile Start */
 @media only screen and (max-width: 755px) {
@@ -255,6 +281,8 @@ nav.top-nav div.login {
         left: 30px;
         padding: 5px 20px 5px 20px;
         width: 0;
+        overflow: hidden;
+        height: 0;
         opacity: 0;
         transition: opacity 0.2s ease, width 0.01s ease;
         border-radius: inherit;
@@ -329,6 +357,7 @@ nav.top-nav div.login {
 
     nav.top-nav span:hover ~ div {
         width: calc(100vw - 100px);
+        height: auto;
         opacity: 1;
     }
     nav.top-nav div.links:hover + div {
@@ -338,4 +367,87 @@ nav.top-nav div.login {
     
 }
 /* Mobile End */
+
+footer {
+    display: flex;
+    background-color: var(--white);
+    width: calc(100vw - 40px);
+    position: relative;
+    bottom: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    left: 20px;
+    height: 200px;
+    box-shadow: var(--shadow);
+}
+
+/* footer div.newsletter span.material-icons {
+    color: black;
+} */
+footer div.newsletter {
+    /* background: var(--gradient); */
+    margin: 20px;
+    color: var(--ptc);
+    background: var(--white);
+    min-height: 56px;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer div.newsletter div.outline-wrapper {
+    width: inherit;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid var(--stc);
+    border-radius: inherit;
+}
+footer div.newsletter > span {
+    position: absolute;
+    background-color: inherit;
+    top: 20px;
+    left: 60px;
+    color: var(--ap);
+    font-family: 'Roboto-Slab-bold';
+    padding: 0 10px;
+}
+footer div.newsletter div input::placeholder {
+    color: var(--stc);
+}
+
+footer div.newsletter div input {
+    height: 100%;
+    background-color: var(--apl);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding-left: 15px;
+    font-size: large;
+    min-width: 200px;
+    padding-left: 46px;
+    width: calc(100% - 66px);
+}
+footer div.newsletter div > span {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 24px;
+    padding: 5px 0;
+}
+footer div.newsletter div button span {
+    font-size: 24px;
+    color: var(--white);
+}
+footer div.newsletter div button {
+    position: absolute;
+    right: 30px;
+    width: 76px;
+    min-width: 36px;
+    height: 36px;
+    border: none;
+    background-color: var(--ap);
+    padding: 6px;
+    border-radius: 8px;
+    margin-right: 10px;
+    float: right;
+}
 
