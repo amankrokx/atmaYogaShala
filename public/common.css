@@ -403,17 +403,17 @@ nav.top-nav div.login {
 
     nav.top-nav div.links {
         position: absolute;
-        top: 71px;
-        left: 30px;
+        top: 56px;
+        left: 0;
         padding: 5px 20px 5px 20px;
-        width: 0;
+        width: 100%;
         overflow: hidden;
         height: 0;
         opacity: 0;
         transition: opacity 0.2s ease, width 0.01s ease;
         border-radius: inherit;
         background-color: var(--white);
-        box-shadow: var(--shadow);
+        z-index: -1;
     }
 
     nav.top-nav div.links a {
@@ -456,18 +456,18 @@ nav.top-nav div.login {
 
     nav.top-nav div.login {
         position: absolute;
-        top: 270px;
-        width: 0;
+        top: 241px;
+        width: 100%;
         border-radius: inherit;
-        height: 56px;
+        height: 0;
         padding: 10px;
-        left: 30px;
+        left: 0;
         opacity: 0;
         background: linear-gradient(90deg, var(--as) 0%, var(--ap) 100%);
         text-align: center;
-        box-shadow: var(--shadow);
         transition: opacity 0.2s ease, width 0.01s ease;
         overflow: hidden;
+        z-index: -1;
     }
     
     nav.top-nav div.login button.signup {
@@ -482,13 +482,11 @@ nav.top-nav div.login {
     }
 
     nav.top-nav span:hover ~ div {
-        width: calc(100vw - 100px);
+        width: 100%;
+        min-height: 56px;
         height: auto;
         opacity: 1;
-    }
-    nav.top-nav div.links:hover + div {
-        width: calc(100vw - 100px);
-        opacity: 1;
+        z-index: 10;
     }
 
     article div.title {
