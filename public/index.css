@@ -1,6 +1,7 @@
 div.products {
     width: 100%;
     height: auto;
+    margin-bottom: 50px;
 }
 
 div.products div.solo {
@@ -9,13 +10,59 @@ div.products div.solo {
     background-position-x: right;
     background-position-y: center;
     background-size: cover;
+    margin-bottom: 20px;
+}
+
+div.products div.group {
+    background-image: url(./assets/group.webp);
+    min-height: 200px;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: cover;
+}
+
+div.products div.solo div.container,
+div.products div.group div.container {
+    max-width: calc(100vw - 270px);
+    min-height: inherit;
+    padding: 20px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 div.products div.solo div.container {
-    max-width: calc(100vw - 200px);
     float: right;
-    min-height: inherit;
-    padding: 15px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.products div.container div.title {
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+div.products div.container div.info {
+}
+div.products div.container div.more {
+    color: var(--ptc);
+}
+
+div.products div.container hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 2px solid var(--as);
+    width: 150px;
+}
+
+div.products div.container button {
+    position: relative;
+    bottom: -25px;
+    right: 15px;
+    height: 36px;
+    padding: 6px 12px;
+    background-color: var(--ap);
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow-close);
+    color: var(--white);
+    font-family: "Roboto-Slab-bold";
+    float: right;
 }
