@@ -1,0 +1,108 @@
+/* main card */
+div.card{
+    position: relative;
+    height: auto;
+    width: 95vw;
+    margin: 50px 50px 30px 35px;
+    background-color: var(--white);
+}
+
+/* left image part */
+div.thumbnail{
+    float: left;
+    position: relative;
+    left: 30px;
+    top: -30px;
+    height: 320px;
+    width: 530px;
+    box-shadow:var(--shadow-close);
+    overflow: hidden;
+}
+
+img.left{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+/* right part */
+div.right{
+    margin-left: 590px;
+    margin-right: 20px;
+}
+
+h1{
+    padding-top: 15px;
+    text-align: left;
+    font-size: 1.3rem;
+    color: var(--stc);
+}
+
+div.author{
+    background-color: var(--as);
+    /* float: right; */
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+} 
+
+div.author img{
+    padding-top: 5px;
+    margin-left: 6px;
+    float: left;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+} 
+
+h2{
+    padding: 12px;
+    vertical-align: middle;
+    /* margin-right: 26px; */
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+div.seperator{
+    margin-top: 10px;
+    border-top: 2px solid var(--ap);
+}
+
+p{
+    text-align: justify;
+    padding-top: 10px;
+    font-size: 0.95rem;
+    line-height: 150%;
+    color: var(--ptc);
+}
+
+h5{
+    position: absolute;
+    text-align: center;
+    /* float: right; */
+    right: 150px;
+    top: 120px;
+    font-size: 6rem;
+    color: var(--ap);
+}
+
+h6{
+    position: absolute;
+    text-align: center;
+    /* float: right; */
+    right: 150px;
+    top: 220px;
+    font-size: 2rem;
+    color: var(--ap);
+}
+
+div.blog_content{
+    margin-top: 200px;
+    padding: 20px;
+    font-size: 0.8rem;
+    line-height: 25px;
+}
