@@ -1,0 +1,21 @@
+div.products {
+    width: 100%;
+    height: auto;
+}
+
+div.products div.solo {
+    background-image: url(./assets/yogapose2.jpg);
+    min-height: 200px;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: cover;
+}
+
+div.products div.solo div.container {
+    max-width: calc(100vw - 200px);
+    float: right;
+    min-height: inherit;
+    padding: 15px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+}
