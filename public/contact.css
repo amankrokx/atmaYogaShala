@@ -19,7 +19,9 @@ div.greet div.title {
 div.greet div.more {
     color: var(--ac2);
     padding: 3px;
+    font-size: large;
     margin-top: 10px;
+    text-shadow: 0 3px 6px var(--ptc);
 }
 
 section {
@@ -32,6 +34,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
+    box-shadow: var(--shadow-close);
 }
 
 section div.form div.title {
@@ -41,7 +44,7 @@ section div.form div.title {
 }
 
 section div.form div.title > span {
-    color: var(--as);
+    color: var(--ptc);
     float: right;
 }
 section div.form {
@@ -105,9 +108,35 @@ section div.form div.inputs {
     justify-content: space-between;
 }
 
+section div.addr > div {
+    display: flex;
+    margin-top: 40px;
+}
+
+section div.addr div.social img {
+    font-size: 1.5em;
+    margin: auto auto;
+}
+section div.addr span.material-icons {
+    color: var(--stc);
+}
+section div.addr {
+    color: var(--bg);
+}
+
+div.addr > div span.material-icons {
+    font-size: 2.5em;
+    margin-right: 10px;
+}
+
+section div.addr > span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 section div.addr {
     width: 35%;
     background-color: var(--ptc);
+    padding: 55px;
 }
 
 section div.form div.inputs button {
