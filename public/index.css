@@ -3,12 +3,21 @@ div.products {
     height: auto;
     margin-bottom: 50px;
 }
+/* Desktop Start */
+@media only screen and (min-width: 756px) {
+    div.products div.solo div.container,
+    div.products div.group div.container {
+        max-width: calc(100vw - 330px);
+    }
 
+    div.products > div {
+        background-position-y: center;
+    }
+}
 div.products div.solo {
-    background-image: url(./assets/yogapose2.jpg);
+    background-image: url(./assets/solo.webp);
     min-height: 200px;
-    background-position-x: right;
-    background-position-y: center;
+    background-position-x: left;
     background-size: contain;
     margin-bottom: 20px;
 }
@@ -17,17 +26,15 @@ div.products div.group {
     background-image: url(./assets/group.webp);
     min-height: 200px;
     background-position-x: right;
-    background-position-y: center;
     background-size: contain;
 }
 
 div.products div.solo div.container,
 div.products div.group div.container {
-    max-width: calc(100vw - 270px);
-    min-height: inherit;
+    min-height: 200px;
     padding: 20px;
     color: black;
-    background-color: var(--apl);
+    background-color: var(--bgb);
 }
 
 div.products div.solo div.container {
@@ -54,8 +61,6 @@ div.products div.container hr {
 
 div.products div.container button {
     position: relative;
-    bottom: -25px;
-    right: 15px;
     height: 36px;
     padding: 6px 12px;
     background-color: var(--ap);
@@ -65,4 +70,17 @@ div.products div.container button {
     color: var(--white);
     font-family: "Roboto-Slab-bold";
     float: right;
+}
+
+/* Mobile Start */
+@media only screen and (max-width: 755px) {
+    div.products > div {
+        display: flex;
+        background-repeat: no-repeat;
+    }
+    div.products > div > div.container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: calc(100% * 0.667);
+    }
 }
