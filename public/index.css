@@ -9,7 +9,7 @@ div.products div.solo {
     min-height: 200px;
     background-position-x: right;
     background-position-y: center;
-    background-size: cover;
+    background-size: contain;
     margin-bottom: 20px;
 }
 
@@ -18,7 +18,7 @@ div.products div.group {
     min-height: 200px;
     background-position-x: right;
     background-position-y: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 div.products div.solo div.container,
@@ -27,7 +27,7 @@ div.products div.group div.container {
     min-height: inherit;
     padding: 20px;
     color: black;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--apl);
 }
 
 div.products div.solo div.container {

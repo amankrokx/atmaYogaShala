@@ -28,7 +28,7 @@ section {
     width: calc(100% - 200px);
     display: flex;
     margin-left: 100px;
-    height: 500px;
+    height: auto;
     background-color: var(--white);
     flex-direction: row;
     flex-wrap: wrap;
@@ -50,6 +50,7 @@ section div.form div.title > span {
 section div.form {
     color: var(--ptc);
     width: 65%;
+    min-width: 600px;
     padding: 55px;
 }
 section div.form div.inputs div.input-box {
