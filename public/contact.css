@@ -1,13 +1,17 @@
-img.backart {
+div.contact_back {
+    width: 100vw;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -2;
+    height: fill-available;
+    height: -moz-fill-available;
+    height: -webkit-fill-available;
 }
 
-div.greet {
-    padding: 100px;
+img.backart {
+    width: 100%;
 }
 
 div.greet div.title {
@@ -25,16 +29,14 @@ div.greet div.more {
 }
 
 section {
-    width: calc(100% - 200px);
     display: flex;
-    margin-left: 100px;
+    margin: 0 auto;
     height: auto;
     background-color: var(--white);
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 50px;
     box-shadow: var(--shadow-close);
+    min-width: min-content;
 }
 
 section div.form div.title {
@@ -47,12 +49,7 @@ section div.form div.title > span {
     color: var(--ptc);
     float: right;
 }
-section div.form {
-    color: var(--ptc);
-    width: 65%;
-    min-width: 600px;
-    padding: 55px;
-}
+
 section div.form div.inputs div.input-box {
     width: auto;
     display: inline-block;
@@ -114,15 +111,11 @@ section div.addr > div {
     margin-top: 40px;
 }
 
-section div.addr div.social img {
-    font-size: 1.5em;
+section div.addr div.social a {
     margin: auto auto;
 }
 section div.addr span.material-icons {
     color: var(--stc);
-}
-section div.addr {
-    color: var(--bg);
 }
 
 div.addr > div span.material-icons {
@@ -134,10 +127,15 @@ section div.addr > span {
     font-size: 1.5em;
     font-weight: bold;
 }
+
 section div.addr {
-    width: 35%;
+    color: var(--bg);
+    min-width: min-content;
     background-color: var(--ptc);
     padding: 55px;
+    max-width: fill-available;
+    max-width: -moz-fill-available;
+    max-width: -webkit-fill-available;
 }
 
 section div.form div.inputs button {
@@ -153,4 +151,65 @@ section div.form div.inputs button {
     position: relative;
     bottom: 0;
     right: 0;
+}
+/* Desktop Start */
+@media only screen and (min-width: 756px) {
+    div.greet {
+        padding: 100px;
+    }
+    section {
+        width: calc(100% - 200px);
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    section div.form {
+        width: 65%;
+        color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+    }
+    section div.addr {
+        width: 35%;
+        color: var(--bg);
+        background-color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+    }
+}
+
+/* Mobile Start */
+@media only screen and (max-width: 755px) {
+    img.backart {
+        transform: scale(1.4);
+    }
+    div.greet {
+        padding: 30px;
+    }
+    section {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    section div.form {
+        width: 100%;
+        color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+        margin: 0 auto;
+    }
+    section div.addr {
+        width: 100%;
+        color: var(--bg);
+        background-color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+    }
 }
