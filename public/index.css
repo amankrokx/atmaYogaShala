@@ -170,6 +170,7 @@ div.products div.group div.container {
     padding: 20px;
     color: black;
     background-color: var(--bgb);
+    position: relative;
 }
 
 div.products div.solo div.container {
@@ -195,7 +196,7 @@ div.products div.container hr {
 }
 
 div.products div.container button {
-    position: relative;
+    position: absolute;
     height: 36px;
     padding: 6px 12px;
     background-color: var(--ap);
@@ -205,7 +206,8 @@ div.products div.container button {
     color: var(--white);
     font-family: "Roboto-Slab-bold";
     float: right;
-    top: 25px;
+    bottom: 20px;
+    right: 20px;
 }
 
 /* Mobile Start */

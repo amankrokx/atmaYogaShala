@@ -189,31 +189,22 @@ div.bannermain > div {
     }
 
     nav.top-nav div.login button {
-        -moz-transform: skew(-27deg, 0deg) translateX(-50px);
-        -webkit-transform: skew(-27deg, 0deg) translateX(-50px);
-        -o-transform: skew(-27deg, 0deg) translateX(-50px);
-        -ms-transform: skew(-27deg, 0deg) translateX(-50px);
-        transform: skew(-27deg, 0deg) translateX(-50px);
         float: right;
-        margin-left: 25px;
+        margin-right: 25px;
     }
 
     nav.top-nav div.login {
         display: inline-block;
         position: absolute;
         top: 0;
-        right: -17px;
+        right: 0;
         height: 56px;
         min-width: 230px;
         width: 26%;
         line-height: 56px;
         padding-top: 20px;
-        -moz-transform: skew(27deg, 0deg);
-        -webkit-transform: skew(27deg, 0deg);
-        -o-transform: skew(27deg, 0deg);
-        -ms-transform: skew(27deg, 0deg);
-        transform: skew(27deg, 0deg);
         max-width: 280px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
     }
 
     nav.top-nav div.login button:first-of-type {

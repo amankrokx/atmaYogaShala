@@ -127,4 +127,12 @@ article > div > span.content {
         width: 100%;
         padding: 0;
     }
+    div.blogsbanner {
+        height: 300px;
+    }
+    div.blogsbanner > div {
+        width: 100%;
+        text-align: justify;
+        align-items: center;
+    }
 }
