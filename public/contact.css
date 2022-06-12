@@ -152,6 +152,7 @@ section div.form div.inputs button {
     bottom: 0;
     right: 0;
 }
+<<<<<<< HEAD
 
 /* footer accordian */
 
@@ -346,6 +347,9 @@ div.acc-item-body {
 }
 
 /* Desktop start  */
+=======
+/* Desktop Start */
+>>>>>>> 130396aa8dde4b25a733b66cfadb236f655fbd6d
 @media only screen and (min-width: 756px) {
     div.greet {
         padding: 100px;
