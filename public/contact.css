@@ -153,10 +153,9 @@ section div.form div.inputs button {
     right: 0;
 }
 
-
 /* footer accordian */
 
-footer div.acc{
+div.acc {
     width: 100%;
     height: auto;
     padding: 15px;
@@ -164,14 +163,14 @@ footer div.acc{
     border-radius: 10px;
 }
 
-footer div.acc-items{
+div.acc-items {
     background-color: #cfe6bc;
     color: black;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
-footer div.acc-item-header{
+div.acc-item-header {
     padding: 0.5rem 3rem 0.5rem 1rem;
     color: #456927;
     min-height: 3.5rem;
@@ -183,70 +182,68 @@ footer div.acc-item-header{
     cursor: pointer;
 }
 
-footer div.acc-item-header::after{
+div.acc-item-header::after {
     content: "\25BE";
     font-size: 2rem;
     position: absolute;
     right: 1rem;
 }
 
-footer div.acc-item-header.active::after{
+div.acc-item-header.active::after {
     transform: rotate(180deg);
 }
 
-footer div.acc-item-body{
-    display: none; 
+div.acc-item-body {
+    display: none;
     padding: 1rem;
-    line-height: 1.5rem;    
+    line-height: 1.5rem;
     border-top: 3px solid;
-    border-image: linear-gradient(to right, #456927 , rgb(183, 183, 73)) 1;
-} 
+    border-image: linear-gradient(to right, #456927, rgb(183, 183, 73)) 1;
+}
 
-.acc-item-header.active + .acc-item-body{
+.acc-item-header.active + .acc-item-body {
     display: block;
 }
 
-
-
- @media(max-width:767px){
-    html{
+@media (max-width: 767px) {
+    html {
         font-size: 14px;
     }
-} 
+}
 
-.slide-color{
+.slide-color {
     background-color: #456927;
 }
-.slide-container{
-    max-width: 1120px; 
+.slide-container {
+    max-width: 1120px;
     width: 100%;
     background-color: #456927;
     padding: 40px 0;
 }
 
-.slide-content{
-    margin: 50px 40px;  
-    overflow: hidden;                 
+.slide-content {
+    margin: 50px 40px;
+    overflow: hidden;
     border-radius: 25px;
 }
 
-.card{
+.card {
     border-radius: 25px;
     background-color: white;
 }
 .image-content,
-.card-content{
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
 }
-.image-content{
+.image-content {
     position: relative;
     row-gap: 5px;
     padding: 25px;
 }
-.overlay{
+.overlay {
     position: absolute;
     left: 0;
     top: 0;
@@ -256,8 +253,8 @@ footer div.acc-item-body{
     border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
-.overlay::after{
-    content: '';
+.overlay::after {
+    content: "";
     position: absolute;
     right: 0;
     bottom: -40px;
@@ -266,13 +263,12 @@ footer div.acc-item-body{
     background-color: #cfe6bc;
 }
 
-.overlay::after{
+.overlay::after {
     border-radius: 0 25px 0 0;
-    background-color: #fff ;
+    background-color: #fff;
 }
 
-
-.card-image{
+.card-image {
     position: relative;
     height: 150px;
     width: 150px;
@@ -281,7 +277,7 @@ footer div.acc-item-body{
     padding: 3px;
 }
 
-.card-image .card-img{
+.card-image .card-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -289,20 +285,20 @@ footer div.acc-item-body{
     border-radius: 4px solid #456927;
 }
 
-.name{
+.name {
     font-size: 18px solid;
     font-weight: 500;
     color: #333;
 }
 
-.description{
+.description {
     margin: 10px 0;
     font-size: 14px;
     color: #707070;
     text-align: center;
 }
 
-.button{
+.button {
     border: none;
     font-size: 16px;
     color: white;
@@ -314,41 +310,39 @@ footer div.acc-item-body{
     transition: all 0.3s ease;
 }
 
-.button:hover{
+.button:hover {
     background: #77ac4c;
-
 }
 
-.swiper-navBtn{
-     color: #456927;  
+.swiper-navBtn {
+    color: #456927;
     transition: color 0.3s ease;
 }
-.swiper-navBtn:hover{
-    color: #cfe6bc; 
+.swiper-navBtn:hover {
+    color: #cfe6bc;
 }
- .swiper-button-next{
+.swiper-button-next {
     right: 0;
 }
-.swiper-button-prev{
+.swiper-button-prev {
     left: 0;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     background-attachment: #456927;
     opacity: 1;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background-attachment: #cfe6bc;
 }
 
 @media screen and (max-width: 768px) {
-    .slide-content{
+    .slide-content {
         margin: 0 10px;
     }
-    .swiper-navBtn{
+    .swiper-navBtn {
         display: none;
     }
-
 }
 
 /* Desktop start  */
