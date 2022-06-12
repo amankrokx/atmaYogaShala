@@ -1,22 +1,3 @@
-// footer accordian 
-
-const accordianIteamHeader = document.querySelectorAll(".acc-item-header");
-accordianIteamHeader.forEach(accordianIteamHeader =>{
-    accordianIteamHeader.addEventListener("click",event => {
-        accordianIteamHeader.classList.toggle("active");
-        const accordianIteamBody = accordianIteamHeader.nextElementSiblings;
-        if(accordianIteamHeader.classList.container("active")){
-            accordianIteamBody.style.maxHeight = accordianIteamBody.scrollHeight + "px";
-        }
-        else{
-            accordianIteamBody.style.maxHeight = 0;
-        }
-    });
-});
-
-
-//Developers Slider list
-
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
