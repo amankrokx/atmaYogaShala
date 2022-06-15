@@ -138,7 +138,7 @@ section div.addr {
     max-width: -webkit-fill-available;
 }
 
-section div.form div.inputs button {
+button {
     height: 36px;
     padding: 6px 12px;
     background-color: var(--ap);
@@ -152,204 +152,91 @@ section div.form div.inputs button {
     bottom: 0;
     right: 0;
 }
-<<<<<<< HEAD
 
-/* footer accordian */
-
-div.acc {
-    width: 100%;
+div.accwrap {
     height: auto;
-    padding: 15px;
-    /* border: 2px solid var(--stc);  */
-    border-radius: 10px;
 }
 
-div.acc-items {
-    background-color: #cfe6bc;
-    color: black;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
-}
-
-div.acc-item-header {
-    padding: 0.5rem 3rem 0.5rem 1rem;
-    color: #456927;
-    min-height: 3.5rem;
-    line-height: 1.25rem;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-
-div.acc-item-header::after {
-    content: "\25BE";
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-}
-
-div.acc-item-header.active::after {
-    transform: rotate(180deg);
-}
-
-div.acc-item-body {
-    display: none;
-    padding: 1rem;
-    line-height: 1.5rem;
-    border-top: 3px solid;
-    border-image: linear-gradient(to right, #456927, rgb(183, 183, 73)) 1;
-}
-
-.acc-item-header.active + .acc-item-body {
-    display: block;
-}
-
-@media (max-width: 767px) {
-    html {
-        font-size: 14px;
-    }
-}
-
-.slide-color {
-    background-color: #456927;
-}
-.slide-container {
-    max-width: 1120px;
-    width: 100%;
-    background-color: #456927;
-    padding: 40px 0;
-}
-
-.slide-content {
-    margin: 50px 40px;
+section.dev {
+    height: 0;
     overflow: hidden;
-    border-radius: 25px;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
 }
 
-.card {
-    border-radius: 25px;
-    background-color: white;
+div.accwrap:hover section.dev {
+    height: fit-content;
+    max-height: 2000px;
 }
-.image-content,
-.card-content {
+
+section.dev div.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    max-height: 490px;
+    overflow-y: scroll;
+    padding-top: 40px;
+}
+
+section.dev div.form div.card {
     display: flex;
     flex-direction: column;
+    width: 160px;
+    height: fit-content;
     align-items: center;
-    padding: 10px 14px;
-}
-.image-content {
-    position: relative;
-    row-gap: 5px;
-    padding: 25px;
-}
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #cfe6bc;
-    border-radius: 25px 25px 0 25px;
-}
-.overlay::before,
-.overlay::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #cfe6bc;
+    padding: 12px;
+    background: var(--apl);
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 5px;
 }
 
-.overlay::after {
-    border-radius: 0 25px 0 0;
-    background-color: #fff;
-}
-
-.card-image {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: black;
-    padding: 3px;
-}
-
-.card-image .card-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border-radius: 4px solid #456927;
-}
-
-.name {
-    font-size: 18px solid;
-    font-weight: 500;
-    color: #333;
-}
-
-.description {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #707070;
+section.dev div.form div.card span.quote {
+    font-style: italic;
+    font-size: small;
     text-align: center;
 }
-
-.button {
-    border: none;
-    font-size: 16px;
-    color: white;
-    padding: 8px 16px;
-    background-color: #456927;
-    border-radius: 6px;
-    margin: 14px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+section.dev div.form div.card span.name {
+    font-family: "Roboto-Slab-bold";
+    color: var(--ptc);
+}
+section.dev div.form div.card button {
+    width: 100%;
+    box-shadow: none;
+}
+section.dev div.form div.card button span {
+    font-size: 24px;
+    margin-left: -10px;
+    vertical-align: middle;
+}
+section.dev div.form div.card img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--ap);
+    padding: 5px;
 }
 
-.button:hover {
-    background: #77ac4c;
+section.accordian span:first-of-type {
+    font-size: 1.2em;
 }
-
-.swiper-navBtn {
-    color: #456927;
-    transition: color 0.3s ease;
+section.accordian {
+    margin-bottom: 0;
+    z-index: 10;
+    position: relative;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 7px 15px 7px 15px;
 }
-.swiper-navBtn:hover {
-    color: #cfe6bc;
-}
-.swiper-button-next {
-    right: 0;
-}
-.swiper-button-prev {
-    left: 0;
-}
-
-.swiper-pagination-bullet {
-    background-attachment: #456927;
-    opacity: 1;
-}
-.swiper-pagination-bullet-active {
-    background-attachment: #cfe6bc;
-}
-
-@media screen and (max-width: 768px) {
-    .slide-content {
-        margin: 0 10px;
-    }
-    .swiper-navBtn {
-        display: none;
-    }
-}
-
-/* Desktop start  */
-=======
 /* Desktop Start */
->>>>>>> 130396aa8dde4b25a733b66cfadb236f655fbd6d
 @media only screen and (min-width: 756px) {
     div.greet {
         padding: 100px;
@@ -367,6 +254,7 @@ div.acc-item-body {
         max-width: -moz-fill-available;
         max-width: -webkit-fill-available;
     }
+
     section div.addr {
         width: 35%;
         color: var(--bg);
@@ -400,6 +288,11 @@ div.acc-item-body {
         max-width: -webkit-fill-available;
         margin: 0 auto;
     }
+
+    section.dev div.form {
+        padding: 0;
+    }
+
     section div.addr {
         width: 100%;
         color: var(--bg);
