@@ -1,7 +1,8 @@
 div.blogsbanner {
     height: 40vw;
     overflow: hidden;
-    background-image: url(https://media.istockphoto.com/photos/preparing-for-training-online-mat-dumbbell-mat-and-laptop-picture-id1225326507?b=1&k=20&m=1225326507&s=170667a&w=0&h=WDdHop4SrttKHJOoo4Mlmo1pzc6hNL901j-DPWDJL64=);
+    /* background-image: url(https://media.istockphoto.com/photos/preparing-for-training-online-mat-dumbbell-mat-and-laptop-picture-id1225326507?b=1&k=20&m=1225326507&s=170667a&w=0&h=WDdHop4SrttKHJOoo4Mlmo1pzc6hNL901j-DPWDJL64=); */
+    background-image: url(./media/Untitled\ design.png);
     background-size:cover;
     background-position-y: center;
     position: relative;
@@ -19,16 +20,19 @@ div.blogsbanner {
 div.blogsbanner div span:last-of-type {
     text-shadow: 0px 2px 4px var(--ttc);
 }
+
 div.blogsbanner div span:first-of-type {
     color: var(--ptc);
     font-size: 2em;
     font-family: "Roboto-Slab-bold";
 }
+
 div.blogsbanner div hr {
     width: calc(100% - 20px);
     border: 2px solid var(--as);
     margin: 5px 0;
 }
+
 div.blogsbanner div {
     display: flex;
     flex-direction: column;
@@ -95,6 +99,7 @@ article > div > div.rating span.rate_cnt{
 
 article > div > div.rating span.material-icons{
     font-size: 1.05rem;
+    margin-top: 10px;
 }
 
 article > div > div.rating span.reg_num{
@@ -106,16 +111,19 @@ article > div > span.price{
     text-decoration: solid;
     font-size: 1.55rem;
 }
+
 article > div > span.price_strike{
     margin: 20px 10px 10px 0;
     color: var(--ttc);
     text-decoration:line-through;
     font-size: 1.05rem;
 }
+
 article > div > span.material-icons{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     right: 0;
-    font-size: 1.45rem;
+    /* font-size: 1.45rem; */
+    font-size: 1.55rem;
     float: right;
     color: var(--stc);
 }

@@ -15,6 +15,8 @@
     --shadow_old: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
         41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+    --shadow-back: 0px 0px 8.4px rgba(0, 0, 0, 0.056),0px 0px 13.8px rgba(0, 0, 0, 0.08),0px 0px 29.9px rgba(0, 0, 0, 0.1),0px 0px 65.2px rgba(0, 0, 0, 0.124),0px 0px 104px rgba(0, 0, 0, 0.18);
+
     --shadow-close: -0.1px -0.1px 15.3px rgba(0, 0, 0, 0.093), 2.5px 1.9px 22.1px rgba(0, 0, 0, 0.094), 9.5px 7.3px 28px rgba(0, 0, 0, 0.087), 22.2px 17.1px 34.9px rgba(0, 0, 0, 0.082),
         40.7px 31.3px 45.3px rgba(0, 0, 0, 0.084), 65px 50px 73px rgba(0, 0, 0, 0.1);
     --gradient: linear-gradient(90deg, var(--as) 0%, var(--ap) 80%);
@@ -108,6 +110,8 @@ nav.top-nav {
     padding: 10px 30px 10px 30px;
     line-height: 36px;
     font-family: "Roboto-Slab-bold", "serif";
+    backdrop-filter: blur(2px);
+
 }
 
 div.bannermain {
