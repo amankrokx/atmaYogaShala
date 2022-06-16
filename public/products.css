@@ -1,16 +1,15 @@
 div.blogsbanner {
     height: 40vw;
     overflow: hidden;
-    /* background-image: url(https://media.istockphoto.com/photos/preparing-for-training-online-mat-dumbbell-mat-and-laptop-picture-id1225326507?b=1&k=20&m=1225326507&s=170667a&w=0&h=WDdHop4SrttKHJOoo4Mlmo1pzc6hNL901j-DPWDJL64=); */
     background-image: url(./media/Untitled\ design.png);
-    background-size:cover;
+    background-size: cover;
     background-position-y: center;
     position: relative;
     top: -56px;
     z-index: -2;
     margin-bottom: -56px;
     display: flex;
-    align-content: center;
+    align-content: flex-end;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
@@ -36,102 +35,90 @@ div.blogsbanner div {
     flex-wrap: wrap;
     align-items: flex-end;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.25);
-    height: inherit;
+    background-color: #0084ff10;
+    height: calc(100% - 56px);
     justify-content: center;
     padding: 0 20px 0 40px;
     text-align: end;
     color: var(--ptc);
     margin-top: 28px;
+    backdrop-filter: blur(2px);
 }
 
-section{
+section {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
     margin: 25px auto;
     width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    margin-top: 50px;
 }
 
-article{
-    height: fit-content;
-    margin: 10px 0;
-    max-width: 48vw;
+
+
+
+
+section article {
+    position: relative;
+    display: flex;
+    width: 360px;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--white);
-    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-article img{
-    width: 100%;
-    /* width: ;
-    height: ; */
-    padding: 10px;
-    height: auto;
+article ul li {
+    list-style: none;
 }
-
-article > div {
-    padding: 0 35px;
+article ul li::before {
+    content: 'arrow_right';
     vertical-align: middle;
-    text-align: left;
-}
-
-article > div span{
-    margin-top: 10px;
-}
-
-article > div span.course_name{
-    font-size: 1.5rem;
-    color: var(--ptc);
-}
-
-article > div span.course_instr{
-    font-size: 0.95rem;
-    color: var(--ttc);
-}
-
-article > div > div.rating span.rate_cnt{
-    font-size: 1.15rem;
-}
-
-article > div > div.rating span.material-icons{
-    font-size: 1.05rem;
-}
-
-article > div > div.rating span.reg_num{
-    font-size: 0.95rem;
-}
-
-article > div > span.price{
-    margin: 20px 10px 10px 0;
-    text-decoration: solid;
-    font-size: 1.55rem;
-}
-article > div > span.price_strike{
-    margin: 20px 10px 10px 0;
-    color: var(--ttc);
-    text-decoration:line-through;
-    font-size: 1.05rem;
-}
-article > div > span.material-icons{
-    margin-bottom: 10px;
-    right: 0;
-    font-size: 1.45rem;
-    float: right;
+    font-family: 'Material Icons';
+    font-size: large;
+    position: relative;
+    top: -2px;
     color: var(--stc);
+    left: -5px;
+}
+article span.name {
+    font-family: 'Roboto-Slab-bold';
+    font-size: large;
+    margin-top: 15px;
+}
+
+article ul {
+    padding: 15px;
+}
+
+section article img {
+    width: 100%;
 }
 
 /* Desktop View */
-/* @media only screen and (min-width: 755px) {
-    section div.column {
-        display: inline-block;
-        width: 50%;
-        padding: 10px;
+@media only screen and (min-width: 755px) {
+    section:last-of-type > article.front {
+        transform: scale(1.1);
+        position: absolute;
+        z-index: 2;
     }
-} */
+    
+    section article:first-of-type {
+        left: 50px;
+    }
+    section article:last-of-type {
+        left: -50px;
+    }
+    section article {
+        margin: 10px;
+        box-shadow: var(--shadow-back);
+    }
+}
 
 /* Mobile View */
-/* @media only screen and (max-width: 755px) {
+@media only screen and (max-width: 755px) {
     section div.column {
         display: block;
         width: 100%;
@@ -145,4 +132,9 @@ article > div > span.material-icons{
         text-align: justify;
         align-items: center;
     }
-} */
+    
+    section article {
+        padding: 7px;
+        width: 100%;
+    }
+}
