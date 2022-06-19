@@ -1,6 +1,6 @@
 :root {
     --ap: #456927;
-    --apl: #cfe6bc;
+    --apl: #a3c587;
     --as: #318cfc;
     --bg: #edf2f7; /*final*/
     --bgb: #dfe6ee;
@@ -126,12 +126,14 @@ div.input-box div.outline-wrapper span.material-icons {
     padding: 5px 0;
 }
 div.input-box span.label {
-    background-color: var(--white);
-    color: var(--ap);
-    font-family: "Roboto-Slab-bold";
+    background-color: var(--stc);
+    color: #01070e;
+    font-family: "Roboto-Slab-regular";
     padding: 0 10px;
-    transform: translate(20px, -10px);
+    transform: translate(13px, -7px);
     position: absolute;
+    border-radius: 5px;
+    font-size: small;
 }
 div.input-box div.outline-wrapper {
     height: 60px;
@@ -226,7 +228,7 @@ div.bannermain > div {
         vertical-align: middle;
         margin-left: calc(5vw);
         font-weight: bold;
-        color: var(--stc);
+        color: var(--ptc);
         font-size: small;
     }
 
@@ -262,6 +264,10 @@ div.bannermain > div {
     }
 
     nav.top-nav span.menu {
+        display: none;
+    }
+
+    div.sign div.wrapper div.abstraction > button {
         display: none;
     }
 }
@@ -325,11 +331,13 @@ div.sign div.wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 680px;
+    max-width: 750px;
     background-image: url(./assets/solo_flip.webp);
     background-position-y: center;
     background-position-x: right;
     background-size: cover;
+    min-height: 410px;
+    max-height: 470px;
 }
 
 div.sign div.wrapper div.abstraction button {
