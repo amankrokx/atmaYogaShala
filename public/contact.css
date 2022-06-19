@@ -147,10 +147,7 @@ button {
     box-shadow: var(--shadow-close);
     color: var(--white);
     font-family: "Roboto-Slab-bold";
-    float: right;
     position: relative;
-    bottom: 0;
-    right: 0;
 }
 
 div.accwrap {
