@@ -51,13 +51,9 @@ section {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: space-around;
     margin-top: 50px;
 }
-
-
-
-
 
 section article {
     position: relative;
@@ -68,15 +64,16 @@ section article {
     background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 article ul li {
     list-style: none;
 }
 article ul li::before {
-    content: 'arrow_right';
+    content: "arrow_right";
     vertical-align: middle;
-    font-family: 'Material Icons';
+    font-family: "Material Icons";
     font-size: large;
     position: relative;
     top: -2px;
@@ -84,7 +81,7 @@ article ul li::before {
     left: -5px;
 }
 article span.name {
-    font-family: 'Roboto-Slab-bold';
+    font-family: "Roboto-Slab-bold";
     font-size: large;
     margin-top: 15px;
 }
@@ -104,7 +101,7 @@ section article img {
         position: absolute;
         z-index: 2;
     }
-    
+
     section article:first-of-type {
         left: 50px;
     }
@@ -114,6 +111,12 @@ section article img {
     section article {
         margin: 10px;
         box-shadow: var(--shadow-back);
+    }
+
+    section article:hover,
+    section article.front:hover {
+        transform: scale(1.15);
+        z-index: 5;
     }
 }
 
@@ -132,7 +135,7 @@ section article img {
         text-align: justify;
         align-items: center;
     }
-    
+
     section article {
         padding: 7px;
         width: 100%;

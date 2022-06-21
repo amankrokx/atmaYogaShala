@@ -73,7 +73,7 @@ section div.form div.inputs div.input-box span.label {
     color: var(--ap);
     font-family: "Roboto-Slab-bold";
     padding: 0 10px;
-    transform: translate(20px, -10px);
+    transform: translate(20px, -8px);
     position: absolute;
 }
 section div.form div.inputs div.input-box div.outline-wrapper {
@@ -147,10 +147,7 @@ button {
     box-shadow: var(--shadow-close);
     color: var(--white);
     font-family: "Roboto-Slab-bold";
-    float: right;
     position: relative;
-    bottom: 0;
-    right: 0;
 }
 
 div.accwrap {

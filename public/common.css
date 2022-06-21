@@ -1,6 +1,6 @@
 :root {
     --ap: #456927;
-    --apl: #cfe6bc;
+    --apl: #a3c587;
     --as: #318cfc;
     --bg: #edf2f7; /*final*/
     --bgb: #dfe6ee;
@@ -15,7 +15,7 @@
     --shadow_old: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
         41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
-    --shadow-back: 0px 0px 8.4px rgba(0, 0, 0, 0.056),0px 0px 13.8px rgba(0, 0, 0, 0.08),0px 0px 29.9px rgba(0, 0, 0, 0.1),0px 0px 65.2px rgba(0, 0, 0, 0.124),0px 0px 104px rgba(0, 0, 0, 0.18);
+    --shadow-back: 0px 0px 8.4px rgba(0, 0, 0, 0.056), 0px 0px 13.8px rgba(0, 0, 0, 0.08), 0px 0px 29.9px rgba(0, 0, 0, 0.1), 0px 0px 65.2px rgba(0, 0, 0, 0.124), 0px 0px 104px rgba(0, 0, 0, 0.18);
 
     --shadow-close: -0.1px -0.1px 15.3px rgba(0, 0, 0, 0.093), 2.5px 1.9px 22.1px rgba(0, 0, 0, 0.094), 9.5px 7.3px 28px rgba(0, 0, 0, 0.087), 22.2px 17.1px 34.9px rgba(0, 0, 0, 0.082),
         40.7px 31.3px 45.3px rgba(0, 0, 0, 0.084), 65px 50px 73px rgba(0, 0, 0, 0.1);
@@ -102,6 +102,60 @@ button:hover {
 button {
     transition: box-shadow 0.2s ease-in;
     cursor: pointer;
+    min-width: 36px;
+    height: 36px;
+    border: none;
+    background-color: var(--ap);
+    padding: 6px;
+    border-radius: 8px;
+    margin-right: 10px;
+    color: var(--white);
+}
+
+/* Inputs */
+div.input-box {
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+div.input-box div.outline-wrapper span.material-icons {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 24px;
+    padding: 5px 0;
+}
+div.input-box span.label {
+    background-color: var(--stc);
+    color: #01070e;
+    font-family: "Roboto-Slab-regular";
+    padding: 0 10px;
+    transform: translate(13px, -7px);
+    position: absolute;
+    border-radius: 5px;
+    font-size: small;
+}
+div.input-box div.outline-wrapper {
+    height: 60px;
+    padding: 10px;
+    border: 2px solid var(--stc);
+    border-radius: inherit;
+}
+div.input-box input {
+    height: 100%;
+    background-color: var(--apl);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding-left: 46px;
+}
+div.input-box textarea {
+    height: 100%;
+    width: 100%;
+    background-color: var(--apl);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding-left: 46px;
+    padding-top: 8px;
 }
 
 nav.top-nav {
@@ -111,7 +165,6 @@ nav.top-nav {
     line-height: 36px;
     font-family: "Roboto-Slab-bold", "serif";
     backdrop-filter: blur(2px);
-
 }
 
 div.bannermain {
@@ -175,7 +228,7 @@ div.bannermain > div {
         vertical-align: middle;
         margin-left: calc(5vw);
         font-weight: bold;
-        color: var(--stc);
+        color: var(--ptc);
         font-size: small;
     }
 
@@ -192,31 +245,29 @@ div.bannermain > div {
         border-bottom: 4px solid var(--ap);
     }
 
-    nav.top-nav div.login button {
-        float: right;
-        margin-right: 25px;
-    }
-
     nav.top-nav div.login {
-        display: inline-block;
+        display: flex;
         position: absolute;
         top: 0;
         right: 0;
         height: 56px;
         min-width: 230px;
         width: 26%;
-        line-height: 56px;
-        padding-top: 20px;
         max-width: 280px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
-    }
-
-    nav.top-nav div.login button:first-of-type {
-        top: -10px;
-        position: relative;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        padding-right: 20px;
     }
 
     nav.top-nav span.menu {
+        display: none;
+    }
+
+    div.sign div.wrapper div.abstraction > button {
         display: none;
     }
 }
@@ -253,8 +304,141 @@ nav.top-nav div.login button:first-of-type {
 nav.top-nav div.login {
     background: var(--ptc);
 }
+
+div.sign {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: grayscale(0.35) blur(3px) brightness(0.6);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+div.sign div.wrapper {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 750px;
+    background-image: url(./assets/solo_flip.webp);
+    background-position-y: center;
+    background-position-x: right;
+    background-size: cover;
+    min-height: 410px;
+    max-height: 470px;
+}
+
+div.sign div.wrapper div.abstraction button {
+    position: absolute;
+    bottom: 50px;
+    width: 50%;
+    color: var(--white);
+}
+div.sign div.wrapper div.abstraction {
+    min-height: 360px;
+    width: 40%;
+    height: 100%;
+    backdrop-filter: saturate(1.5) brightness(1.1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+    font-size: 2.5em;
+    font-family: "Roboto-Slab-bold";
+    text-shadow: 0px 0 1px var(--ptc);
+    padding: 10px;
+}
+
+div.sign div.wrapper > div.logup {
+    width: 60%;
+    height: 100%;
+    padding: 15px;
+    backdrop-filter: contrast(0.8) blur(5px) sepia(0.5) brightness(1.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div.logup div.title {
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+div.logup div.inputs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+div.logup div.title > span {
+    color: var(--ptc);
+    float: right;
+}
+div.logup center > span {
+    font-size: 0.8em;
+    color: var(--ptc);
+}
+div.logup div.socials {
+    width: 247px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+div.logup button {
+    display: block;
+    margin: auto 0;
+    width: 247px;
+}
+
 /* Mobile Start */
 @media only screen and (max-width: 755px) {
+    div.sign div.wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    div.sign div.wrapper {
+        width: 100%;
+        background-position-x: left;
+        overflow-y: scroll;
+        height: 80%;
+        /* transition: background-position-x 0s; */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    div.sign div.wrapper div.abstraction {
+        width: 100%;
+        height: 85%;
+    }
+    div.sign div.wrapper > div.logup {
+        width: 100%;
+        height: 100%;
+    }
     nav.top-nav span.menu {
         float: right;
         padding: 3px;
@@ -275,13 +459,11 @@ nav.top-nav div.login {
         padding: 5px 20px 5px 20px;
         width: 100%;
         overflow: hidden;
-        height: 0;
         opacity: 0;
-        transition: opacity 0.2s ease, width 0.01s ease;
-        transition-delay: 0.3;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
         border-radius: inherit;
         background-color: var(--white);
-        z-index: -1;
     }
 
     nav.top-nav div.links a {
@@ -327,15 +509,15 @@ nav.top-nav div.login {
         top: 241px;
         width: 100%;
         border-radius: inherit;
-        height: 0;
+        height: 100%;
         padding: 10px;
         left: 0;
         opacity: 0;
+        visibility: hidden;
         background: linear-gradient(90deg, var(--as) 0%, var(--ap) 100%);
         text-align: center;
-        transition: opacity 0.2s ease, width 0.01s ease;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
         overflow: hidden;
-        z-index: -1;
     }
 
     nav.top-nav div.login button.signup {
@@ -348,10 +530,8 @@ nav.top-nav div.login {
     }
 
     nav.top-nav span:hover ~ div {
-        width: 100%;
-        min-height: 56px;
-        height: auto;
         opacity: 1;
+        visibility: visible;
         z-index: 10;
     }
 
