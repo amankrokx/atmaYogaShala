@@ -1,25 +1,25 @@
 /* main card */
-div.card{
+div.card {
     position: relative;
     height: auto;
     width: 95vw;
-    margin: 50px 50px 30px 35px;
+    margin: 56px auto;
     background-color: var(--white);
 }
 
 /* left image part */
-div.thumbnail{
+div.thumbnail {
     float: left;
     position: relative;
     left: 30px;
     top: -30px;
     height: 320px;
     width: 530px;
-    box-shadow:var(--shadow-close);
+    box-shadow: var(--shadow-close);
     overflow: hidden;
 }
 
-img.left{
+img.left {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -29,36 +29,36 @@ img.left{
 }
 
 /* right part */
-div.right{
+div.right {
     margin-left: 590px;
     margin-right: 20px;
 }
 
-h1{
+h1 {
     padding-top: 15px;
     text-align: left;
     font-size: 1.3rem;
     color: var(--stc);
 }
 
-div.author{
+div.author {
     background-color: var(--as);
     /* float: right; */
     height: 40px;
     width: 150px;
     border-radius: 20px;
-} 
+}
 
-div.author img{
+div.author img {
     padding-top: 5px;
     margin-left: 6px;
     float: left;
     height: 35px;
     width: 35px;
     border-radius: 50%;
-} 
+}
 
-h2{
+h2 {
     padding: 12px;
     vertical-align: middle;
     /* margin-right: 26px; */
@@ -67,12 +67,12 @@ h2{
     color: var(--white);
 }
 
-div.seperator{
+div.seperator {
     margin-top: 10px;
     border-top: 2px solid var(--ap);
 }
 
-p{
+p {
     text-align: justify;
     padding-top: 10px;
     font-size: 0.95rem;
@@ -80,7 +80,7 @@ p{
     color: var(--ptc);
 }
 
-h5{
+h5 {
     position: absolute;
     text-align: center;
     /* float: right; */
@@ -90,7 +90,7 @@ h5{
     color: var(--ap);
 }
 
-h6{
+h6 {
     position: absolute;
     text-align: center;
     /* float: right; */
@@ -100,7 +100,7 @@ h6{
     color: var(--ap);
 }
 
-div.blog_content{
+div.blog_content {
     margin-top: 200px;
     padding: 20px;
     font-size: 0.8rem;

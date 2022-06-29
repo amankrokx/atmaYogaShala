@@ -23,7 +23,7 @@
   "homepage": "https://github.com/amankrokx/atmaYogaShala#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "firebase": "^9.8.1",
+    "firebase": "^9.8.3",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.16",
     "style-loader": "^3.3.1",
