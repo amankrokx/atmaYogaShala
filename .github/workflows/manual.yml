@@ -10,4 +10,6 @@ jobs:
       - run: npm ci
 
       - run: npm run prod
+      - run: git add .
+      - run: git commit -m "deployment"
       - run: git push origin master
