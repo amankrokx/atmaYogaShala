@@ -1,0 +1,302 @@
+div.contact_back {
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    height: fill-available;
+    height: -moz-fill-available;
+    height: -webkit-fill-available;
+}
+
+img.backart {
+    width: 100%;
+}
+
+div.greet div.title {
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 2.5em;
+}
+
+div.greet div.more {
+    color: var(--ac2);
+    padding: 3px;
+    font-size: large;
+    margin-top: 10px;
+    text-shadow: 0 3px 6px var(--ptc);
+}
+
+section {
+    display: flex;
+    margin: 0 auto;
+    height: auto;
+    background-color: var(--white);
+    justify-content: center;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow-close);
+    min-width: min-content;
+}
+
+section div.form div.title {
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+section div.form div.title > span {
+    color: var(--ptc);
+    float: right;
+}
+
+section div.form div.inputs div.input-box {
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+section div.form div.inputs div.message {
+    width: 100%;
+    display: block;
+}
+section div.form div.inputs div.message div.outline-wrapper {
+    height: 100px !important;
+}
+section div.form div.inputs div.input-box div.outline-wrapper span.material-icons {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 24px;
+    padding: 5px 0;
+}
+section div.form div.inputs div.input-box span.label {
+    background-color: var(--white);
+    color: var(--ap);
+    font-family: "Roboto-Slab-bold";
+    padding: 0 10px;
+    transform: translate(20px, -8px);
+    position: absolute;
+}
+section div.form div.inputs div.input-box div.outline-wrapper {
+    height: 60px;
+    padding: 10px;
+    border: 2px solid var(--stc);
+    border-radius: inherit;
+}
+section div.form div.inputs div.input-box input {
+    height: 100%;
+    background-color: var(--apl);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding-left: 46px;
+}
+section div.form div.inputs div.input-box textarea {
+    height: 100%;
+    width: 100%;
+    background-color: var(--apl);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    padding-left: 46px;
+    padding-top: 8px;
+}
+section div.form div.inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+section div.addr > div {
+    display: flex;
+    margin-top: 40px;
+}
+
+section div.addr div.social a {
+    margin: auto auto;
+}
+section div.addr span.material-icons {
+    color: var(--stc);
+}
+
+div.addr > div span.material-icons {
+    font-size: 2.5em;
+    margin-right: 10px;
+}
+
+section div.addr > span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section div.addr {
+    color: var(--bg);
+    min-width: min-content;
+    background-color: var(--ptc);
+    padding: 55px;
+    max-width: fill-available;
+    max-width: -moz-fill-available;
+    max-width: -webkit-fill-available;
+}
+
+button {
+    height: 36px;
+    padding: 6px 12px;
+    background-color: var(--ap);
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow-close);
+    color: var(--white);
+    font-family: "Roboto-Slab-bold";
+    position: relative;
+}
+
+div.accwrap {
+    height: auto;
+}
+
+section.dev {
+    height: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+div.accwrap:hover section.dev {
+    height: fit-content;
+    max-height: 2000px;
+}
+
+section.dev div.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    max-height: 490px;
+    overflow-y: scroll;
+    padding-top: 40px;
+}
+
+section.dev div.form div.card {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: fit-content;
+    align-items: center;
+    padding: 12px;
+    background: var(--apl);
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+section.dev div.form div.card span.quote {
+    font-style: italic;
+    font-size: small;
+    text-align: center;
+}
+section.dev div.form div.card span.name {
+    font-family: "Roboto-Slab-bold";
+    color: var(--ptc);
+}
+section.dev div.form div.card button {
+    width: 100%;
+    box-shadow: none;
+}
+section.dev div.form div.card button span {
+    font-size: 24px;
+    margin-left: -10px;
+    vertical-align: middle;
+}
+section.dev div.form div.card img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--ap);
+    padding: 5px;
+}
+
+section.accordian span:first-of-type {
+    font-size: 1.2em;
+}
+section.accordian {
+    margin-bottom: 0;
+    z-index: 10;
+    position: relative;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 7px 15px 7px 15px;
+}
+/* Desktop Start */
+@media only screen and (min-width: 756px) {
+    div.greet {
+        padding: 100px;
+    }
+    section {
+        width: calc(100% - 200px);
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    section div.form {
+        width: 65%;
+        color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+    }
+
+    section div.addr {
+        width: 35%;
+        color: var(--bg);
+        background-color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+    }
+}
+
+/* Mobile Start */
+@media only screen and (max-width: 755px) {
+    img.backart {
+        transform: scale(1.4);
+    }
+    div.greet {
+        padding: 30px;
+    }
+    section {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    section div.form {
+        width: 100%;
+        color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+        margin: 0 auto;
+    }
+
+    section.dev div.form {
+        padding: 0;
+    }
+
+    section div.addr {
+        width: 100%;
+        color: var(--bg);
+        background-color: var(--ptc);
+        padding: 55px;
+        max-width: fill-available;
+        max-width: -moz-fill-available;
+        max-width: -webkit-fill-available;
+    }
+}
