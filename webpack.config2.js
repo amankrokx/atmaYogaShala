@@ -6,6 +6,8 @@ let jsfiles = {
     login: "./src/login.js",
     common: "./src/common.js",
 }
+// nice
+
 console.log("Building files : ")
 fs.readdirSync("./src/pages").forEach(file => {
     if (file.endsWith(".html")) {
