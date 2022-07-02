@@ -1,0 +1,12 @@
+name: Build webpack
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v1
+      - run: npm install
+
+      - run: npm run prod:ci
