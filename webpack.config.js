@@ -28,7 +28,7 @@ module.exports = {
     target: "web",
     entry: jsfiles,
     output: {
-        path: path.resolve(__dirname, "public"),
+        path: path.resolve(__dirname, "public_temp"),
     },
     devtool: "eval-source-map",
     module: {
@@ -43,13 +43,17 @@ module.exports = {
             },
         ],
     },
+    optimization: {
+        runtimeChunk: "single",
+    },
     plugins: multipleHtmlPlugins,
     mode: "development",
     devServer: {
         watchFiles: ["./src/pages/*.html", "./src/html/*.html"],
-        open: false,
+        open: true,
         compress: true,
         hot: true,
         liveReload: true,
+        devMiddleware: { writeToDisk: true },
     },
 }

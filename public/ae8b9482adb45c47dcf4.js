@@ -2,7 +2,6 @@ import "./css/common.css"
 import "./assets/material-icons.css"
 import header from "./html/header.html"
 import footer from "./html/footer.html"
-import loadScript from "./modules/scriptLoader"
 
 document.querySelector("body").insertAdjacentHTML("afterbegin", header)
 document.querySelector("body").insertAdjacentHTML("beforeend", footer)
@@ -27,7 +26,6 @@ let dealWithHash = () => {
             document.querySelector("footer").scrollIntoView({ behavior: "smooth", block: "start" })
             break
         case "login":
-            loadScript("login.js")
             sign_ui.style["opacity"] = "1"
             sign_ui.style["visibility"] = "visible"
             break

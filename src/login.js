@@ -8,9 +8,9 @@ import {
     RecaptchaVerifier,
     signInWithPopup,
     FacebookAuthProvider,
-    getAuth,
-    onAuthStateChanged,
 } from "firebase/auth"
+
+console.log("login loaded !")
 
 let signupEmail = auth => {
     // console.log('Signup with email loaded')
@@ -217,5 +217,3 @@ let loginPhone = auth => {
         return false
     }
 }
-
-export { loginEmail, signupEmail, loginGoogle, loginPhone, loginTwitter, loginFb }

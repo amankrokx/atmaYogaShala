@@ -2,7 +2,46 @@ import "./css/common.css"
 import "./assets/material-icons.css"
 import header from "./html/header.html"
 import footer from "./html/footer.html"
-import loadScript from "./modules/scriptLoader"
+import loader from "./modules/loader"
+
+// Dynamically load scripts
+const loadScript = (FILE_URL, async = true, type = "text/javascript") => {
+    return new Promise((resolve, reject) => {
+        if (typeof loadScript.loadedScripts == "undefined") loadScript.loadedScripts = []
+        if (loadScript.loadedScripts.includes(FILE_URL)) {
+            console.error("Already Loading script !")
+            reject({
+                status: false,
+                message: `Already loading/loaded the script ${FILE_URL}`,
+            })
+        } else {
+            try {
+                const scriptEle = document.createElement("script")
+                scriptEle.type = type
+                scriptEle.async = async
+                scriptEle.src = FILE_URL
+                loadedScripts.push(FILE_URL)
+                scriptEle.addEventListener("load", ev => {
+                    console.log("loaded")
+                    resolve({ status: true })
+                })
+
+                scriptEle.addEventListener("error", ev => {
+                    console.error(ev)
+                    loadScript.loadedScripts.splice(loadScript.loadedScripts.indexOf(FILE_URL), 1)
+                    reject({
+                        status: false,
+                        message: `Failed to load the script ${FILE_URL}`,
+                    })
+                })
+
+                document.body.appendChild(scriptEle)
+            } catch (error) {
+                reject(error)
+            }
+        }
+    })
+}
 
 document.querySelector("body").insertAdjacentHTML("afterbegin", header)
 document.querySelector("body").insertAdjacentHTML("beforeend", footer)
@@ -27,7 +66,6 @@ let dealWithHash = () => {
             document.querySelector("footer").scrollIntoView({ behavior: "smooth", block: "start" })
             break
         case "login":
-            loadScript("login.js")
             sign_ui.style["opacity"] = "1"
             sign_ui.style["visibility"] = "visible"
             break

@@ -27,7 +27,6 @@ let dealWithHash = () => {
             document.querySelector("footer").scrollIntoView({ behavior: "smooth", block: "start" })
             break
         case "login":
-            loadScript("login.js")
             sign_ui.style["opacity"] = "1"
             sign_ui.style["visibility"] = "visible"
             break
@@ -60,4 +59,5 @@ sign_ui.onclick = e => {
 }
 document.querySelector("nav div.login").onclick = e => {
     window.location.hash = "login"
+    loadScript("login.js")
 }
