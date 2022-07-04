@@ -27,14 +27,17 @@
 
 @font-face {
     font-family: "Roboto-Slab-bold";
+    font-display: swap;
     src: url("../assets/Roboto-Bold.ttf");
 }
 @font-face {
     font-family: "Roboto-Slab-regular";
+    font-display: swap;
     src: url("../assets/Roboto-Regular.ttf");
 }
 @font-face {
     font-family: "Roboto-Slab-light";
+    font-display: swap;
     src: url("../assets/Roboto-Light.ttf");
 }
 
@@ -128,7 +131,7 @@ div.input-box div.outline-wrapper span.material-icons {
 }
 div.input-box span.label {
     background-color: var(--stc);
-    color: #01070e;
+    color: var(--white);
     font-family: "Roboto-Slab-regular";
     padding: 0 10px;
     transform: translate(13px, -7px);
@@ -296,7 +299,8 @@ nav.top-nav div.login button {
     font-weight: bold;
     vertical-align: middle;
 }
-nav.top-nav div.login button:first-of-type {
+nav.top-nav div.login button.signup,
+nav.top-nav div.login button.logout {
     background-color: rgba(255, 255, 255, 0.4);
     padding: 10px 15px 10px 15px;
     border-radius: 15px;
@@ -454,11 +458,11 @@ div.logup button {
     }
 
     nav.top-nav div.links {
-        position: absolute;
-        top: 56px;
-        left: 0;
+        position: relative;
+        top: 4px;
+        left: -30px;
         padding: 5px 20px 5px 20px;
-        width: 100%;
+        width: 100vw;
         overflow: hidden;
         opacity: 0;
         visibility: hidden;
@@ -506,13 +510,13 @@ div.logup button {
     }
 
     nav.top-nav div.login {
-        position: absolute;
-        top: 241px;
-        width: 100%;
+        position: relative;
+        top: 4px;
+        width: 100vw;
         border-radius: inherit;
-        height: 100%;
+        height: fit-content;
         padding: 10px;
-        left: 0;
+        left: -30px;
         opacity: 0;
         visibility: hidden;
         background: linear-gradient(90deg, var(--as) 0%, var(--ap) 100%);
