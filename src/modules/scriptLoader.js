@@ -1,7 +1,6 @@
-const loader = require("./loader")
-
+import { showLoader, hideLoader } from "./loader.js"
 // Dynamically load scripts
-const loadScript = (FILE_URL, async = true, type = "text/javascript") => {
+export const loadScript = (FILE_URL, async = true, type = "text/javascript") => {
     return new Promise((resolve, reject) => {
         if (typeof loadScript.loadedScripts == "undefined") loadScript.loadedScripts = []
         if (loadScript.loadedScripts.includes(FILE_URL)) {
@@ -12,7 +11,7 @@ const loadScript = (FILE_URL, async = true, type = "text/javascript") => {
             })
         } else {
             try {
-                loader.showLoader()
+                showLoader()
                 const scriptEle = document.createElement("script")
                 scriptEle.type = type
                 scriptEle.async = async
@@ -20,13 +19,13 @@ const loadScript = (FILE_URL, async = true, type = "text/javascript") => {
                 loadScript.loadedScripts.push(FILE_URL)
                 scriptEle.addEventListener("load", ev => {
                     console.log("loaded")
-                    loader.hideLoader()
+                    hideLoader()
                     resolve({ status: true })
                 })
 
                 scriptEle.addEventListener("error", ev => {
                     console.error(ev)
-                    loader.hideLoader()
+                    hideLoader()
                     loadScript.loadedScripts.splice(loadScript.loadedScripts.indexOf(FILE_URL), 1)
                     reject({
                         status: false,
@@ -41,5 +40,3 @@ const loadScript = (FILE_URL, async = true, type = "text/javascript") => {
         }
     })
 }
-
-module.exports = loadScript

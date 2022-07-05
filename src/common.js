@@ -2,11 +2,11 @@ import "./css/common.css"
 import "./assets/material-icons.css"
 import header from "./html/header.html"
 import footer from "./html/footer.html"
-import loadScript from "./modules/scriptLoader"
-
+import { loadScript } from "./modules/scriptLoader"
+import toast from "./modules/smackbars"
 document.querySelector("body").insertAdjacentHTML("afterbegin", header)
 document.querySelector("body").insertAdjacentHTML("beforeend", footer)
-
+loadScript("login.js")
 let sign_ui = document.querySelector("div.sign")
 document.querySelector("#sitemap").onclick = e => {
     e.preventDefault()
@@ -60,4 +60,13 @@ sign_ui.onclick = e => {
 }
 document.querySelector("nav div.login").onclick = e => {
     window.location.hash = "login"
+}
+
+document.querySelector("#loginemail span.switch").onclick = () => {
+    document.querySelector("div.email").classList.add("hidden")
+    document.querySelector("div.phone").classList.remove("hidden")
+}
+document.querySelector("#loginphone span.switch").onclick = () => {
+    document.querySelector("div.phone").classList.add("hidden")
+    document.querySelector("div.email").classList.remove("hidden")
 }

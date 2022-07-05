@@ -8,11 +8,51 @@ import {
     RecaptchaVerifier,
     signInWithPopup,
     FacebookAuthProvider,
+    getAuth,
+    onAuthStateChanged,
+    signOut,
 } from "firebase/auth"
+import toast from "./modules/smackbars"
 
-console.log("login loaded !")
+let auth
+if (window.firebaseApp) {
+    auth = getAuth(window.firebaseApp)
+    window["auth"] = auth
+} else console.log("error login init")
 
-let signupEmail = auth => {
+onAuthStateChanged(auth, user => {
+    if (user) {
+        // logged in state...
+        console.log(user)
+        window["user"] = user
+        window.location.hash = ""
+        const hiddens = document.querySelectorAll(".ifLoggedIn")
+        hiddens.forEach(e => {
+            if (e.classList.contains("hidden")) e.classList.remove("hidden")
+            else e.classList.add("hidden")
+            document.querySelector("nav div.login").onclick = null
+            document.querySelector("nav div.login button.logout").onclick = () => {
+                signOut(auth)
+                    .then(() => {
+                        toast("Logged Out !")
+                        window.location.reload()
+                    })
+                    .catch(e => {
+                        toast("Error Logging Out !")
+                    })
+            }
+        })
+    } else {
+        // logged out state...
+        toast("Please Sign In .")
+        const socials = document.querySelectorAll("div.sign div.socials img")
+        socials[0].onclick = loginFb
+        socials[1].onclick = loginTwitter
+        socials[2].onclick = loginGoogle
+    }
+})
+
+let signupEmail = () => {
     // console.log('Signup with email loaded')
     document.querySelector("#main form.signup input.submit").onclick = function (e) {
         e.preventDefault()
@@ -33,7 +73,7 @@ let signupEmail = auth => {
     }
 }
 
-let loginEmail = auth => {
+let loginEmail = () => {
     // console.log('Login with Email loaded')
     document.querySelector("#main form.login input.submit").onclick = function (e) {
         e.preventDefault()
@@ -53,9 +93,8 @@ let loginEmail = auth => {
     }
 }
 
-let loginGoogle = auth => {
+let loginGoogle = () => {
     const provider = new GoogleAuthProvider()
-    provider.addScope("https://www.googleapis.com/auth/user.phonenumbers.read")
     signInWithPopup(auth, provider)
         .then(res => {
             getRedirectResult(auth)
@@ -85,7 +124,7 @@ let loginGoogle = auth => {
         })
 }
 
-let loginTwitter = auth => {
+let loginTwitter = () => {
     const provider = new TwitterAuthProvider()
     signInWithPopup(auth, provider)
         .then(res => {
@@ -117,7 +156,7 @@ let loginTwitter = auth => {
         })
 }
 
-let loginFb = auth => {
+let loginFb = () => {
     const provider = new FacebookAuthProvider()
     signInWithPopup(auth, provider)
         .then(res => {
@@ -149,7 +188,7 @@ let loginFb = auth => {
         })
 }
 
-let submitPhoneNumberAuth = auth => {
+let submitPhoneNumberAuth = () => {
     let phone = document.querySelector("#main form.signup_phone input.phone").value
     let appVerifier = window.recaptchaVerifier
     signInWithPhoneNumber(auth, phone, appVerifier)
@@ -173,7 +212,7 @@ let submitPhoneNumberAuth = auth => {
         })
 }
 
-let submitPhoneNumberAuthCode = auth => {
+let submitPhoneNumberAuthCode = () => {
     let code = document.querySelector("#main form.signup_phone input.otp").value
     if (code.length < 5) {
         toast("Invalid OTP")
@@ -192,7 +231,7 @@ let submitPhoneNumberAuthCode = auth => {
         })
 }
 
-let loginPhone = auth => {
+let loginPhone = () => {
     // console.log('Login with phone loaded !')
     window.recaptchaVerifier = new RecaptchaVerifier(
         "recaptcha-container",
