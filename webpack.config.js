@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const fs = require("fs")
 let pages = []
 let jsfiles = {
-    login: "./src/login.js",
     common: "./src/common.js",
 }
 console.log("Building files : ")
@@ -21,6 +20,7 @@ let multipleHtmlPlugins = pages.map(name => {
         template: `./src/pages/${name}.html`, // relative path to the HTML files
         filename: `./${name}.html`, // output HTML files
         chunks: [`${name}`, "common"], // respective JS files
+        title: name,
     })
 })
 
@@ -30,7 +30,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "public_temp"),
     },
-    // devtool: "eval-source-map",
+    devtool: "eval-source-map",
     module: {
         rules: [
             {
@@ -54,6 +54,6 @@ module.exports = {
         compress: true,
         hot: true,
         liveReload: true,
-        devMiddleware: { writeToDisk: true },
+        devMiddleware: { writeToDisk: false },
     },
 }
