@@ -6,7 +6,7 @@ import { loadScript } from "./modules/scriptLoader"
 import toast from "./modules/smackbars"
 document.querySelector("body").insertAdjacentHTML("afterbegin", header)
 document.querySelector("body").insertAdjacentHTML("beforeend", footer)
-loadScript("login.js")
+
 let sign_ui = document.querySelector("div.sign")
 document.querySelector("#sitemap").onclick = e => {
     e.preventDefault()

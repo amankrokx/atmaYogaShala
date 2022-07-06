@@ -7,7 +7,6 @@ div#smacks {
     right: 25px;
     z-index: 100;
     height: auto;
-    width: 50%;
     max-width: calc(100% - 50px);
     flex-direction: column-reverse;
     flex-wrap: nowrap;
@@ -17,10 +16,10 @@ div#smacks {
 }
 #smacks .smackbar {
     background: var(--ptc);
-    width: 100%;
     margin-top: 10px;
     border-radius: 10px;
     height: 36px;
+    width: 100%;
     line-height: 36px;
     display: flex;
     justify-content: space-between;
@@ -32,6 +31,16 @@ div#smacks {
 }
 #smacks span.material-icons {
     font-size: 24px;
+}
+@media only screen and (min-width: 756px) {
+    #smacks {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 755px) {
+    #smacks {
+        width: calc(100% - 50px);
+    }
 }
 </style>
 <div id="smacks" ></div>
