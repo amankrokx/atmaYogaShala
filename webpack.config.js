@@ -54,6 +54,6 @@ module.exports = {
         compress: true,
         hot: true,
         liveReload: true,
-        devMiddleware: { writeToDisk: true },
+        devMiddleware: { writeToDisk: false },
     },
 }

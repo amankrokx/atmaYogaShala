@@ -45,7 +45,37 @@ div.blogsbanner div {
     backdrop-filter: blur(2px);
 }
 
-section {
+span.head_line{
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+section.solo{
+    display: flex;
+    margin: 25px auto;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 50px; */
+}
+
+section.solo article{
+    position: relative;
+    display: flex;
+    /* width: 360px; */
+    width: 490px;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+section.group {
     display: flex;
     margin: 25px auto;
     width: 100%;
@@ -94,6 +124,11 @@ section article img {
     width: 100%;
 }
 
+button{
+    font-family: "Roboto-Slab-bold";
+}
+
+
 /* Desktop View */
 @media only screen and (min-width: 755px) {
     section:last-of-type > article.front {
@@ -102,10 +137,10 @@ section article img {
         z-index: 2;
     }
 
-    section article:first-of-type {
+    section.group article:first-of-type {
         left: 50px;
     }
-    section article:last-of-type {
+    section.group article:last-of-type {
         left: -50px;
     }
     section article {
@@ -113,8 +148,13 @@ section article img {
         box-shadow: var(--shadow-back);
     }
 
-    section article:hover,
-    section article.front:hover {
+    section.solo article:hover{
+        transform: scale(1.10);
+        z-index: 5;
+    }
+
+    section.group article:hover,
+    section.group article.front:hover {
         transform: scale(1.15);
         z-index: 5;
     }

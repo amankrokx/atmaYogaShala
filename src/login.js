@@ -15,42 +15,48 @@ import {
 import toast from "./modules/smackbars"
 
 let auth
-if (window.firebaseApp) {
-    auth = getAuth(window.firebaseApp)
-    window["auth"] = auth
-} else console.log("error login init")
 
-onAuthStateChanged(auth, user => {
-    if (user) {
-        // logged in state...
-        console.log(user)
-        window["user"] = user
-        window.location.hash = ""
-        const hiddens = document.querySelectorAll(".ifLoggedIn")
-        hiddens.forEach(e => {
-            if (e.classList.contains("hidden")) e.classList.remove("hidden")
-            else e.classList.add("hidden")
-            document.querySelector("nav div.login").onclick = null
-            document.querySelector("nav div.login button.logout").onclick = () => {
-                signOut(auth)
-                    .then(() => {
-                        toast("Logged Out !")
-                        window.location.reload()
-                    })
-                    .catch(e => {
-                        toast("Error Logging Out !")
-                    })
+let int = setInterval(() => {
+    if (window.firebaseApp) {
+        clearInterval(int)
+        if (window.firebaseApp) {
+            auth = getAuth(window.firebaseApp)
+            window["auth"] = auth
+        } else console.log("error login init")
+        
+        onAuthStateChanged(auth, user => {
+            if (user) {
+                // logged in state...
+                console.log(user)
+                window["user"] = user
+                window.location.hash = ""
+                const hiddens = document.querySelectorAll(".ifLoggedIn")
+                hiddens.forEach(e => {
+                    if (e.classList.contains("hidden")) e.classList.remove("hidden")
+                    else e.classList.add("hidden")
+                    document.querySelector("nav div.login").onclick = null
+                    document.querySelector("nav div.login button.logout").onclick = () => {
+                        signOut(auth)
+                            .then(() => {
+                                toast("Logged Out !")
+                                window.location.reload()
+                            })
+                            .catch(e => {
+                                toast("Error Logging Out !")
+                            })
+                    }
+                })
+            } else {
+                // logged out state...
+                toast("Please Sign In .")
+                const socials = document.querySelectorAll("div.sign div.socials img")
+                socials[0].onclick = loginFb
+                socials[1].onclick = loginTwitter
+                socials[2].onclick = loginGoogle
             }
         })
-    } else {
-        // logged out state...
-        toast("Please Sign In .")
-        const socials = document.querySelectorAll("div.sign div.socials img")
-        socials[0].onclick = loginFb
-        socials[1].onclick = loginTwitter
-        socials[2].onclick = loginGoogle
     }
-})
+}, 20);
 
 let signupEmail = () => {
     // console.log('Signup with email loaded')
