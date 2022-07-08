@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const fs = require("fs")
 let pages = []
 let jsfiles = {
-    login: "./src/login.js",
     common: "./src/common.js",
 }
 // nice

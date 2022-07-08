@@ -8,15 +8,17 @@
         <a href="../index.html" id="home" class="" title="Home">Home</a>
         <a href="../dashboard.html" id="dashboard" class="ifLoggedIn hidden" title="Dashboard">Dashboard</a>
         <a href="../products.html" id="products" title="Products">Courses</a>
-        <a href="" id="sitemap" title="Sitemap">Sitemap</a>
+        <a href="#sitemap" id="sitemap" title="Sitemap">Sitemap</a>
         <a href="../contact.html" id="contact" title="Contact">Support</a>
         <a href="../about.html" id="about" title="About">About</a>
     </div>
     <div class="login">
-        <button class="signup ifLoggedIn">Sign Up</button>
-        <button class="login ifLoggedIn">Log In</button>
-        <button class="logout ifLoggedIn hidden">Log Out</button>
-        <button class="notifications ifLoggedIn hidden" style="margin-right: 12px"><span class="material-icons" style="font-size: 24px">notifications</span></button>
+        <a href="#login" id="loginlink">
+            <button class="signup ifLoggedIn">Sign Up</button>
+            <button class="login ifLoggedIn">Log In</button>
+        </a>
+            <button class="logout ifLoggedIn hidden">Log Out</button>
+            <button class="notifications ifLoggedIn hidden" style="margin-right: 12px"><span class="material-icons" style="font-size: 24px">notifications</span></button>
     </div>
 </nav>
 <div class="sign" id="sign">
@@ -44,7 +46,27 @@
                         </div>
                     </div>
                     <button>Login</button>
-                    <span class="switch" style="margin-right: -115px; font-size: 14px; margin-top: 5px">Use Phone Instead</span>
+                    <span class="switch switchphone" style="margin-right: -115px; font-size: 14px; margin-top: 5px">Use Phone Instead</span>
+                </div>
+            </div>
+            <div class="emailsignup hidden" id="signupemail">
+                <div class="inputs">
+                    <div class="email input-box">
+                        <span class="label"> Your Email </span>
+                        <div class="outline-wrapper">
+                            <span class="material-icons">mail</span>
+                            <input name="email" type="email" placeholder="john.smith@gmail.com" />
+                        </div>
+                    </div>
+                    <div class="password input-box">
+                        <span class="label"> Your Password </span>
+                        <div class="outline-wrapper">
+                            <span class="material-icons">lock</span>
+                            <input name="email" type="password" placeholder="* * * * * * * *" />
+                        </div>
+                    </div>
+                    <button>Signup</button>
+                    <span class="switch switchphone" style="margin-right: -115px; font-size: 14px; margin-top: 5px">Use Phone Instead</span>
                 </div>
             </div>
             <div class="phone hidden" id="loginphone">
@@ -65,13 +87,14 @@
                     </div>
                     <button>Send OTP</button>
                     <span class="switch" style="margin-right: -115px; font-size: 14px; margin-top: 5px">Use Email Instead</span>
+                    <div id="recaptcha-container"ocomm></div>
                 </div>
             </div>
             <br />
             <center>
                 <span>Don't have accout ? Signup</span>
                 <br />
-                <span>or Continue using</span>
+                <span id="emailsignup">or Continue using</span>
             </center>
             <div class="socials">
                 <img src="../assets/facebook.png" alt="FB" />

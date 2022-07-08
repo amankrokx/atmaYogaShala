@@ -1,5 +1,6 @@
 import "./css/index.css"
 import { loadScript } from "./modules/scriptLoader"
+import {Authmgrs} from "./modules/login"
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app"
 // import { getAnalytics } from "firebase/analytics";
@@ -11,8 +12,7 @@ const firebaseConfig = require("../firebaseConfig")
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-window["firebaseApp"] = app
-loadScript("login.js")
-
+let authmgr = new Authmgrs(app)
+authmgr.sayhi()
 // const analytics = getAnalytics(app);
 console.log("ok")

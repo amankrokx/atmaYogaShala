@@ -8,10 +8,6 @@ document.querySelector("body").insertAdjacentHTML("afterbegin", header)
 document.querySelector("body").insertAdjacentHTML("beforeend", footer)
 
 let sign_ui = document.querySelector("div.sign")
-document.querySelector("#sitemap").onclick = e => {
-    e.preventDefault()
-    changeHash("sitemap")
-}
 
 if (window.location.pathname.includes("index.html")) document.querySelector("#home").classList.add("nav-active")
 else if (window.location.pathname.includes("contact.html")) document.querySelector("#contact").classList.add("nav-active")
@@ -27,7 +23,6 @@ let dealWithHash = () => {
             document.querySelector("footer").scrollIntoView({ behavior: "smooth", block: "start" })
             break
         case "login":
-            loadScript("login.js")
             sign_ui.style["opacity"] = "1"
             sign_ui.style["visibility"] = "visible"
             break
@@ -58,15 +53,21 @@ sign_ui.onclick = e => {
         sign_ui.style["visibility"] = "hidden"
     }
 }
-document.querySelector("nav div.login").onclick = e => {
-    window.location.hash = "login"
-}
 
-document.querySelector("#loginemail span.switch").onclick = () => {
+document.querySelectorAll("span.switchphone").forEach(e => {
+    e.onclick = () => {
+        document.querySelector("div.email").classList.add("hidden")
+        document.querySelector("div.emailsignup").classList.add("hidden")
+        document.querySelector("div.phone").classList.remove("hidden")
+    }
+})
+document.querySelector("#emailsignup").onclick = () => {
     document.querySelector("div.email").classList.add("hidden")
-    document.querySelector("div.phone").classList.remove("hidden")
+    document.querySelector("div.phone").classList.add("hidden")
+    document.querySelector("div.emailsignup").classList.remove("hidden")
 }
 document.querySelector("#loginphone span.switch").onclick = () => {
     document.querySelector("div.phone").classList.add("hidden")
+    document.querySelector("div.emailsignup").classList.add("hidden")
     document.querySelector("div.email").classList.remove("hidden")
 }
