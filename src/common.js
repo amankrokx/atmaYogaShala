@@ -16,58 +16,58 @@ else if (window.location.pathname.includes("about.html")) document.querySelector
 else document.querySelector("#home").classList.add("nav-active")
 
 let dealWithHash = () => {
-    let hash = window.location.hash.substring(1)
-    console.log(hash)
-    switch (hash) {
-        case "sitemap":
-            document.querySelector("footer").scrollIntoView({ behavior: "smooth", block: "start" })
-            break
-        case "login":
-            sign_ui.style["opacity"] = "1"
-            sign_ui.style["visibility"] = "visible"
-            break
-        default: // Hide active popups
-            sign_ui.style["opacity"] = "0"
-            sign_ui.style["visibility"] = "hidden"
-            break
-    }
+  let hash = window.location.hash.substring(1)
+  console.log(hash)
+  switch (hash) {
+    case "sitemap":
+      document.querySelector("footer").scrollIntoView({ behavior: "smooth", block: "start" })
+      break
+    case "login":
+      sign_ui.style["opacity"] = "1"
+      sign_ui.style["visibility"] = "visible"
+      break
+    default: // Hide active popups
+      sign_ui.style["opacity"] = "0"
+      sign_ui.style["visibility"] = "hidden"
+      break
+  }
 }
 let changeHash = hash => {
-    if (window.location.hash.substring(1) === hash) window.dispatchEvent(new HashChangeEvent("hashchange"))
-    else window.location.hash = hash
+  if (window.location.hash.substring(1) === hash) window.dispatchEvent(new HashChangeEvent("hashchange"))
+  else window.location.hash = hash
 }
 dealWithHash()
 addEventListener("hashchange", dealWithHash)
 
 // Animations...
 document.querySelector("div.sign div.wrapper").onscroll = e => {
-    e.target.style["background-position-x"] = (e.target.scrollTop / e.target.children[0].clientHeight) * 30 + "%"
+  e.target.style["background-position-x"] = (e.target.scrollTop / e.target.children[0].clientHeight) * 30 + "%"
 }
 document.querySelector("div.sign div.wrapper div.abstraction button").onclick = e => {
-    document.querySelector("div.sign div.wrapper div.logup").scrollIntoView({ behavior: "smooth", block: "start" })
+  document.querySelector("div.sign div.wrapper div.logup").scrollIntoView({ behavior: "smooth", block: "start" })
 }
 sign_ui.onclick = e => {
-    if (e.target.id === "sign") {
-        window.location.hash = ""
-        sign_ui.style["opacity"] = "0"
-        sign_ui.style["visibility"] = "hidden"
-    }
+  if (e.target.id === "sign") {
+    window.location.hash = ""
+    sign_ui.style["opacity"] = "0"
+    sign_ui.style["visibility"] = "hidden"
+  }
 }
 
 document.querySelectorAll("span.switchphone").forEach(e => {
-    e.onclick = () => {
-        document.querySelector("div.email").classList.add("hidden")
-        document.querySelector("div.emailsignup").classList.add("hidden")
-        document.querySelector("div.phone").classList.remove("hidden")
-    }
+  e.onclick = () => {
+    document.querySelector("div.email").classList.add("hidden")
+    document.querySelector("div.emailsignup").classList.add("hidden")
+    document.querySelector("div.phone").classList.remove("hidden")
+  }
 })
 document.querySelector("#emailsignup").onclick = () => {
-    document.querySelector("div.email").classList.add("hidden")
-    document.querySelector("div.phone").classList.add("hidden")
-    document.querySelector("div.emailsignup").classList.remove("hidden")
+  document.querySelector("div.email").classList.add("hidden")
+  document.querySelector("div.phone").classList.add("hidden")
+  document.querySelector("div.emailsignup").classList.remove("hidden")
 }
 document.querySelector("#loginphone span.switch").onclick = () => {
-    document.querySelector("div.phone").classList.add("hidden")
-    document.querySelector("div.emailsignup").classList.add("hidden")
-    document.querySelector("div.email").classList.remove("hidden")
+  document.querySelector("div.phone").classList.add("hidden")
+  document.querySelector("div.emailsignup").classList.add("hidden")
+  document.querySelector("div.email").classList.remove("hidden")
 }

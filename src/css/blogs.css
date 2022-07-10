@@ -1,139 +1,140 @@
 div.blogsbanner {
-    height: 40vw;
-    overflow: hidden;
-    background-image: url(../assets/yogaatbeach.webp);
-    background-size: cover;
-    background-position-y: center;
-    position: relative;
-    top: -56px;
-    z-index: -2;
-    margin-bottom: -56px;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  height: 40vw;
+  overflow: hidden;
+  background-image: url(../assets/yogaatbeach.webp);
+  background-size: cover;
+  background-position-y: center;
+  position: relative;
+  top: -56px;
+  z-index: -2;
+  margin-bottom: -56px;
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 div.blogsbanner div span:last-of-type {
-    text-shadow: 0px 2px 4px var(--ttc);
+  text-shadow: 0px 2px 4px var(--ttc);
 }
 div.blogsbanner div span:first-of-type {
-    color: var(--ptc);
-    font-size: 2em;
-    font-family: "Roboto-Slab-bold";
+  color: var(--ptc);
+  font-size: 2em;
+  font-family: "Roboto";
+  font-weight: bold;
 }
 div.blogsbanner div hr {
-    width: calc(100% - 20px);
-    border: 2px solid var(--as);
-    margin: 5px 0;
+  width: calc(100% - 20px);
+  border: 2px solid var(--as);
+  margin: 5px 0;
 }
 div.blogsbanner div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    width: 50%;
-    background-color: #0084ff10;
-    justify-content: center;
-    padding: 0 20px 0 40px;
-    text-align: end;
-    color: var(--ptc);
-    margin-top: 28px;
-    height: calc(100% - 56px);
-    backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 50%;
+  background-color: #0084ff10;
+  justify-content: center;
+  padding: 0 20px 0 40px;
+  text-align: end;
+  color: var(--ptc);
+  margin-top: 28px;
+  height: calc(100% - 56px);
+  backdrop-filter: blur(2px);
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 25px auto;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 25px auto;
+  width: 100%;
 }
 
 section div.column {
-    display: inline-block;
-    width: 50%;
-    padding: 10px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
 }
 
 article {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: fit-content;
-    margin: 10px 0;
-    background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: fit-content;
+  margin: 10px 0;
+  background-color: var(--white);
 }
 
 article img {
-    width: 100%;
+  width: 100%;
 }
 
 article > div span.title {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 article > div {
-    padding: 0 35px;
+  padding: 0 35px;
 }
 
 article > div > div:first-of-type {
-    line-height: 24px;
-    padding-top: 16px;
-    width: 100%;
-    color: var(--stc);
+  line-height: 24px;
+  padding-top: 16px;
+  width: 100%;
+  color: var(--stc);
 }
 
 article > div > div:first-of-type > span.material-icons {
-    float: right;
-    font-size: 24px;
-    vertical-align: middle;
+  float: right;
+  font-size: 24px;
+  vertical-align: middle;
 }
 
 article > div > div.author span {
-    vertical-align: middle;
-    color: var(--ap);
-    margin-left: 15px;
+  vertical-align: middle;
+  color: var(--ap);
+  margin-left: 15px;
 }
 article > div > div.author img {
-    height: 30px;
-    width: 30px;
-    vertical-align: middle;
-    border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  border-radius: 50%;
 }
 article > div > div.author {
-    width: 100%;
-    padding: 5px 0;
+  width: 100%;
+  padding: 5px 0;
 }
 article > div > span.content {
-    color: var(--ptc);
+  color: var(--ptc);
 }
 
 /* Desktop View */
 @media only screen and (min-width: 755px) {
-    section div.column {
-        display: inline-block;
-        width: 50%;
-        padding: 10px;
-    }
+  section div.column {
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+  }
 }
 
 /* Mobile View */
 @media only screen and (max-width: 755px) {
-    section div.column {
-        display: block;
-        width: 100%;
-        padding: 0;
-    }
-    div.blogsbanner {
-        height: 300px;
-    }
-    div.blogsbanner > div {
-        width: 100%;
-        text-align: justify;
-        align-items: center;
-    }
+  section div.column {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  div.blogsbanner {
+    height: 300px;
+  }
+  div.blogsbanner > div {
+    width: 100%;
+    text-align: justify;
+    align-items: center;
+  }
 }
