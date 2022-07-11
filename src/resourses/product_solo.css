@@ -1,155 +1,155 @@
 div.blogsbanner {
-    height: 40vw;
-    overflow: hidden;
-    /* background-image: url(https://media.istockphoto.com/photos/preparing-for-training-online-mat-dumbbell-mat-and-laptop-picture-id1225326507?b=1&k=20&m=1225326507&s=170667a&w=0&h=WDdHop4SrttKHJOoo4Mlmo1pzc6hNL901j-DPWDJL64=); */
-    background-image: url(./media/Untitled\ design.png);
-    background-size:cover;
-    background-position-y: center;
-    position: relative;
-    top: -56px;
-    z-index: -2;
-    margin-bottom: -56px;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  height: 40vw;
+  overflow: hidden;
+  /* background-image: url(https://media.istockphoto.com/photos/preparing-for-training-online-mat-dumbbell-mat-and-laptop-picture-id1225326507?b=1&k=20&m=1225326507&s=170667a&w=0&h=WDdHop4SrttKHJOoo4Mlmo1pzc6hNL901j-DPWDJL64=); */
+  background-image: url(./media/Untitled\ design.png);
+  background-size:cover;
+  background-position-y: center;
+  position: relative;
+  top: -56px;
+  z-index: -2;
+  margin-bottom: -56px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 div.blogsbanner div span:last-of-type {
-    text-shadow: 0px 2px 4px var(--ttc);
+  text-shadow: 0px 2px 4px var(--ttc);
 }
 
 div.blogsbanner div span:first-of-type {
-    color: var(--ptc);
-    font-size: 2em;
-    font-family: "Roboto-Slab-bold";
+  color: var(--ptc);
+  font-size: 2em;
+  font-family: "Roboto-Slab-bold";
 }
 
 div.blogsbanner div hr {
-    width: calc(100% - 20px);
-    border: 2px solid var(--as);
-    margin: 5px 0;
+  width: calc(100% - 20px);
+  border: 2px solid var(--as);
+  margin: 5px 0;
 }
 
 div.blogsbanner div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.25);
-    height: inherit;
-    justify-content: center;
-    padding: 0 20px 0 40px;
-    text-align: end;
-    color: var(--ptc);
-    margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  height: inherit;
+  justify-content: center;
+  padding: 0 20px 0 40px;
+  text-align: end;
+  color: var(--ptc);
+  margin-top: 28px;
 }
 
 section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin: 25px auto;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 25px auto;
+  width: 100%;
 }
 
 article{
-    height: fit-content;
-    margin: 10px 0;
-    max-width: 48vw;
-    background-color: var(--white);
-    margin: 10px;
+  height: fit-content;
+  margin: 10px 0;
+  max-width: 48vw;
+  background-color: var(--white);
+  margin: 10px;
 }
 
 article img{
-    width: 100%;
-    /* width: ;
-    height: ; */
-    padding: 10px;
-    height: auto;
+  width: 100%;
+  /* width: ;
+  height: ; */
+  padding: 10px;
+  height: auto;
 }
 
 article > div {
-    padding: 0 35px;
-    vertical-align: middle;
-    text-align: left;
+  padding: 0 35px;
+  vertical-align: middle;
+  text-align: left;
 }
 
 article > div span{
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 article > div span.course_name{
-    font-size: 1.5rem;
-    color: var(--ptc);
+  font-size: 1.5rem;
+  color: var(--ptc);
 }
 
 article > div span.course_instr{
-    font-size: 0.95rem;
-    color: var(--ttc);
+  font-size: 0.95rem;
+  color: var(--ttc);
 }
 
 article > div > div.rating span.rate_cnt{
-    font-size: 1.15rem;
+  font-size: 1.15rem;
 }
 
 article > div > div.rating span.material-icons{
-    font-size: 1.05rem;
-    margin-top: 10px;
+  font-size: 1.05rem;
+  margin-top: 10px;
 }
 
 article > div > div.rating span.reg_num{
-    font-size: 0.95rem;
+  font-size: 0.95rem;
 }
 
 article > div > span.price{
-    margin: 20px 10px 10px 0;
-    text-decoration: solid;
-    font-size: 1.55rem;
+  margin: 20px 10px 10px 0;
+  text-decoration: solid;
+  font-size: 1.55rem;
 }
 
 article > div > span.price_strike{
-    margin: 20px 10px 10px 0;
-    color: var(--ttc);
-    text-decoration:line-through;
-    font-size: 1.05rem;
+  margin: 20px 10px 10px 0;
+  color: var(--ttc);
+  text-decoration:line-through;
+  font-size: 1.05rem;
 }
 
 article > div > span.material-icons{
-    margin-bottom: 20px;
-    right: 0;
-    /* font-size: 1.45rem; */
-    font-size: 1.55rem;
-    float: right;
-    color: var(--stc);
+  margin-bottom: 20px;
+  right: 0;
+  /* font-size: 1.45rem; */
+  font-size: 1.55rem;
+  float: right;
+  color: var(--stc);
 }
 
 /* Desktop View */
 /* @media only screen and (min-width: 755px) {
-    section div.column {
-        display: inline-block;
-        width: 50%;
-        padding: 10px;
-    }
+  section div.column {
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+  }
 } */
 
 /* Mobile View */
 /* @media only screen and (max-width: 755px) {
-    section div.column {
-        display: block;
-        width: 100%;
-        padding: 0;
-    }
-    div.blogsbanner {
-        height: 300px;
-    }
-    div.blogsbanner > div {
-        width: 100%;
-        text-align: justify;
-        align-items: center;
-    }
+  section div.column {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  div.blogsbanner {
+    height: 300px;
+  }
+  div.blogsbanner > div {
+    width: 100%;
+    text-align: justify;
+    align-items: center;
+  }
 } */

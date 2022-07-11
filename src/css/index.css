@@ -1,265 +1,264 @@
 div.products {
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 article {
-    min-height: 300px;
-    height: auto;
-    background-image: url(../assets/yogapose2.jpg);
-    background-size: cover;
-    margin-top: 45px;
-    background-repeat: no-repeat;
-    background-position-x: right;
-    overflow: hidden;
-    background-color: var(--ttc);
-    background-position-y: center;
-    margin-bottom: 45px;
+  min-height: 300px;
+  height: auto;
+  background-image: url(../assets/yogapose2.jpg);
+  background-size: cover;
+  margin-top: 45px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  overflow: hidden;
+  background-color: var(--ttc);
+  background-position-y: center;
+  margin-bottom: 45px;
 }
 
 article {
-    background-image: url(../assets/yogapose1.jpg);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    margin-top: 0;
+  background-image: url(../assets/yogapose1.jpg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 0;
 }
 
 article div.title div:last-of-type {
-    font-size: 1.1em;
-    padding-top: 5px;
-    color: var(--ptc);
+  font-size: 1.1em;
+  padding-top: 5px;
+  color: var(--ptc);
 }
 article div.title div:first-of-type {
-    border-bottom: 2px solid var(--stc);
-    font-size: 2em;
-    padding-bottom: 5px;
-    color: var(--as);
+  border-bottom: 2px solid var(--stc);
+  font-size: 2em;
+  padding-bottom: 5px;
+  color: var(--as);
 }
 article div.title {
-    display: flex;
-    max-width: 33%;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px 10px 10px 10px;
-    min-width: 245px;
-    width: auto;
-    height: auto;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
-    border-radius: 10px;
+  display: flex;
+  max-width: 33%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+  min-width: 245px;
+  width: auto;
+  height: auto;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 10px;
 }
 
 article div.more button {
-    height: 36px;
-    padding: 6px 12px;
-    background-color: var(--ap);
-    border: none;
-    border-radius: 8px;
-    box-shadow: var(--shadow-close);
-    color: var(--white);
-    font-family: "Roboto-Slab-bold";
+  height: 36px;
+  padding: 6px 12px;
+  background-color: var(--ap);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-close);
+  color: var(--white);
+  font-family: "Roboto";
+  font-weight: bold;
 }
 article div.more {
-    display: flex;
-    width: 15%;
-    min-height: inherit;
-    position: absolute;
-    align-items: center;
-    height: 100%;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 01) 100%);
-    justify-content: center;
+  display: flex;
+  width: 15%;
+  min-height: inherit;
+  position: absolute;
+  align-items: center;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 01) 100%);
+  justify-content: center;
 }
 
 article div.card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 article div.cards {
-    display: flex;
-    width: 60%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: space-evenly;
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-evenly;
 }
 
 article div.cards div.card {
-    height: 225px;
-    width: 160px;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-    background-color: var(--white);
-    box-shadow: var(--shadow-close);
-    transition: transform 0.3s ease-in-out;
-    background: linear-gradient(0deg, #3f3f3f 0%, #bebebe 12%, var(--white) 18%);
+  height: 225px;
+  width: 160px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-close);
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(0deg, #3f3f3f 0%, #bebebe 12%, var(--white) 18%);
 }
 
 article div.cards div.card img {
-    height: 100px;
+  height: 100px;
 }
 
 article div.cards div.card span.description {
-    font-size: smaller;
-    color: var(--ptc);
-    margin: 2px 8px;
-    word-wrap: break-word;
-    display: block;
-    border-top: 1px solid var(--stc);
+  font-size: smaller;
+  color: var(--ptc);
+  margin: 2px 8px;
+  word-wrap: break-word;
+  display: block;
+  border-top: 1px solid var(--stc);
 }
 article div.cards div.card span.author {
-    font-size: smaller;
-    color: var(--ap);
-    padding: 0 5px;
-    word-wrap: break-word;
-    display: block;
+  font-size: smaller;
+  color: var(--ap);
+  padding: 0 5px;
+  word-wrap: break-word;
+  display: block;
 }
 
 article div.cards div.card span.title {
-    position: absolute;
-    color: var(--white);
-    /* font-family: 'Roboto-Slab-bold'; */
-    bottom: 125px;
-    left: 00px;
-    width: 160px;
-    border-radius: 0 10px 0 0;
-    padding: 5px 5px 5px 5px;
-    word-wrap: break-word;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  color: var(--white);
+  bottom: 125px;
+  left: 00px;
+  width: 160px;
+  border-radius: 0 10px 0 0;
+  padding: 5px 5px 5px 5px;
+  word-wrap: break-word;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 /* Desktop Start */
 @media only screen and (min-width: 756px) {
-    div.products div.solo div.container,
-    div.products div.group div.container {
-        max-width: calc(100vw - 330px);
-    }
+  div.products div.solo div.container,
+  div.products div.group div.container {
+    max-width: calc(100vw - 330px);
+  }
 
-    div.products > div {
-        background-position-y: center;
-    }
+  div.products > div {
+    background-position-y: center;
+  }
 }
 div.products div.solo {
-    background-image: url(../assets/solo.webp);
-    min-height: 200px;
-    background-position-x: left;
-    background-size: contain;
-    margin-bottom: 20px;
+  background-image: url(../assets/solo.webp);
+  min-height: 200px;
+  background-position-x: left;
+  background-size: contain;
+  margin-bottom: 20px;
 }
 
 div.products div.group {
-    background-image: url(../assets/group.webp);
-    min-height: 200px;
-    background-position-x: right;
-    background-size: contain;
+  background-image: url(../assets/group.webp);
+  min-height: 200px;
+  background-position-x: right;
+  background-size: contain;
 }
 
 div.products div.solo div.container,
 div.products div.group div.container {
-    min-height: 200px;
-    padding: 20px;
-    color: black;
-    background-color: var(--bgb);
-    position: relative;
+  min-height: 200px;
+  padding: 20px;
+  color: black;
+  background-color: var(--bgb);
+  position: relative;
 }
 
 div.products div.solo div.container {
-    float: right;
+  float: right;
 }
 
 div.products div.container div.title {
-    font-weight: bolder;
-    font-size: 1.5em;
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 
-div.products div.container div.info {
-}
 div.products div.container div.more {
-    color: var(--ptc);
+  color: var(--ptc);
 }
 
 div.products div.container hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: 2px solid var(--as);
-    width: 150px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 2px solid var(--as);
+  width: 150px;
 }
 
 div.products div.container button {
-    position: absolute;
-    height: 36px;
-    padding: 6px 12px;
-    background-color: var(--ap);
-    border: none;
-    border-radius: 8px;
-    box-shadow: var(--shadow-close);
-    color: var(--white);
-    font-family: "Roboto-Slab-bold";
-    float: right;
-    bottom: 20px;
-    right: 20px;
+  position: absolute;
+  height: 36px;
+  padding: 6px 12px;
+  background-color: var(--ap);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-close);
+  color: var(--white);
+  font-family: "Roboto";
+  font-weight: bold;
+  float: right;
+  bottom: 20px;
+  right: 20px;
 }
 
 /* Mobile Start */
 @media only screen and (max-width: 755px) {
-    div.products > div {
-        display: flex;
-        background-repeat: no-repeat;
-    }
-    div.products > div > div.container {
-        width: 100%;
-        max-width: 100%;
-        margin-top: calc(100% * 0.667);
-    }
-    article div.title {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), transparent);
-        text-align: center;
-        padding-top: 20px;
-        max-width: 100%;
-        align-items: center;
-    }
+  div.products > div {
+    display: flex;
+    background-repeat: no-repeat;
+  }
+  div.products > div > div.container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: calc(100% * 0.667);
+  }
+  article div.title {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), transparent);
+    text-align: center;
+    padding-top: 20px;
+    max-width: 100%;
+    align-items: center;
+  }
 
-    article div.more {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        min-height: 80px;
-        padding: 10px;
-        position: relative;
-        flex-direction: column;
-        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
-    }
+  article div.more {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    padding: 10px;
+    position: relative;
+    flex-direction: column;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.7));
+  }
 
-    article div.cards div.card img {
-        width: 100%;
-        height: 137.5px;
-    }
-    article div.cards div.card span.title {
-        bottom: 152.5px;
-        width: 100%;
-    }
-    article div.cards div.card {
-        margin: 15px 0;
-        width: 220px;
-        height: 290px;
-    }
-    article div.cards {
-        width: 80%;
-    }
+  article div.cards div.card img {
+    width: 100%;
+    height: 137.5px;
+  }
+  article div.cards div.card span.title {
+    bottom: 152.5px;
+    width: 100%;
+  }
+  article div.cards div.card {
+    margin: 15px 0;
+    width: 220px;
+    height: 290px;
+  }
+  article div.cards {
+    width: 80%;
+  }
 
-    article {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+  article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }

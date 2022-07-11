@@ -1,41 +1,45 @@
 {
-  "name": "atmayogashala",
-  "version": "0.0.1",
-  "description": "Website for yoga Camp",
-  "private": true,
-  "scripts": {
-    "dev-server": "webpack-dev-server",
-    "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack --config ./webpack.config2.js",
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "backend": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amankrokx/atmaYogaShala.git"
-  },
-  "author": "amankrokx",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amankrokx/atmaYogaShala/issues"
-  },
-  "homepage": "https://github.com/amankrokx/atmaYogaShala#readme",
-  "devDependencies": {
-    "css-loader": "^6.7.1",
-    "firebase": "^9.8.3",
-    "html-loader": "^3.1.2",
-    "html-webpack-plugin": "^5.5.0",
-    "nodemon": "^2.0.16",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "google-auth-library": "^8.0.2",
-    "googleapis": "^100.0.0",
-    "path": "^0.12.7"
-  }
+    "name": "atmayogashala",
+    "version": "0.0.1",
+    "description": "Website for yoga Camp",
+    "private": true,
+    "scripts": {
+        "dev-server": "webpack-dev-server",
+        "dev": "webpack-dev-server --mode=development",
+        "prod": "webpack --config ./webpack.config2.js",
+        "start": "export GOOGLE_APPLICATION_CREDENTIALS=\"/home/amankrokx/atmayogashala-3485c-7c95868860bc.json\" && nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "backend": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amankrokx/atmaYogaShala.git"
+    },
+    "author": "amankrokx",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/amankrokx/atmaYogaShala/issues"
+    },
+    "homepage": "https://github.com/amankrokx/atmaYogaShala#readme",
+    "devDependencies": {
+        "css-loader": "^6.7.1",
+        "firebase": "^9.8.3",
+        "html-loader": "^3.1.2",
+        "html-webpack-plugin": "^5.5.0",
+        "nodemon": "^2.0.16",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.9.0"
+    },
+    "dependencies": {
+        "connect-mongo": "^4.6.0",
+        "dotenv": "^16.0.1",
+        "express-session": "^1.17.3",
+        "firebase-admin": "^11.0.0",
+        "google-auth-library": "^8.0.2",
+        "googleapis": "^100.0.0",
+        "mongodb": "^4.7.0",
+        "path": "^0.12.7"
+    }
 }
