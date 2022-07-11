@@ -46,46 +46,6 @@ div.blogsbanner div {
   backdrop-filter: blur(2px);
 }
 
-<<<<<<< HEAD
-span.head_line{
-    line-height: 36px;
-    vertical-align: middle;
-    font-size: 1.5em;
-}
-
-section.solo{
-    display: flex;
-    margin: 25px auto;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* margin-top: 50px; */
-}
-
-section.solo article{
-    position: relative;
-    display: flex;
-    /* width: 360px; */
-    width: 490px;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-section.group {
-    display: flex;
-    margin: 25px auto;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 50px;
-=======
 section {
   display: flex;
   margin: 25px auto;
@@ -94,7 +54,6 @@ section {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 50px;
->>>>>>> 92864642054f90becf38154de36a74f95177e0c7
 }
 
 section article {
@@ -150,29 +109,6 @@ button{
     z-index: 2;
   }
 
-<<<<<<< HEAD
-    section.group article:first-of-type {
-        left: 50px;
-    }
-    section.group article:last-of-type {
-        left: -50px;
-    }
-    section article {
-        margin: 10px;
-        box-shadow: var(--shadow-back);
-    }
-
-    section.solo article:hover{
-        transform: scale(1.10);
-        z-index: 5;
-    }
-
-    section.group article:hover,
-    section.group article.front:hover {
-        transform: scale(1.15);
-        z-index: 5;
-    }
-=======
   section article:first-of-type {
     left: 50px;
   }
@@ -189,7 +125,6 @@ button{
     transform: scale(1.15);
     z-index: 5;
   }
->>>>>>> 92864642054f90becf38154de36a74f95177e0c7
 }
 
 /* Mobile View */
